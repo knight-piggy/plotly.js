@@ -8,17 +8,17 @@ var through = require('through2');
 
 // one line string with or without trailing comma
 function makeStringRegex(attr) {
-    return attr + ': \'.*\'' + ',?';
+    return '\n\s*' + attr + ': \'.*\'' + ',?';
 }
 
 // joined array of strings with or without trailing comma
 function makeJoinedArrayRegex(attr) {
-    return attr + ': \\[[\\s\\S]*?\\]' + '\\.join\\(.*' + ',?';
+    return '\n\s*' + attr + ': \\[[\\s\\S]*?\\]' + '\\.join\\(.*' + ',?';
 }
 
 // array with or without trailing comma
 function makeArrayRegex(attr) {
-    return attr + ': \\[[\\s\\S]*?\\]' + ',?';
+    return '\n\s*' + attr + ': \\[[\\s\\S]*?\\]' + ',?';
 }
 
 // ref: http://www.regexr.com/3cmac
