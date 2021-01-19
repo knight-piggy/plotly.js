@@ -2976,7 +2976,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
           svg.remove();
         }
       }
-      if (d3_mouse_bug44083) point.x = e.pageX, point.y = e.pageY; else point.x = e.clientX, 
+      if (d3_mouse_bug44083) point.x = e.pageX, point.y = e.pageY; else point.x = e.clientX,
       point.y = e.clientY;
       point = point.matrixTransform(container.getScreenCTM().inverse());
       return [ point.x, point.y ];
@@ -3351,7 +3351,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
     }
     function mousewheeled() {
       var dispatch = event.of(this, arguments);
-      if (mousewheelTimer) clearTimeout(mousewheelTimer); else d3_selection_interrupt.call(this), 
+      if (mousewheelTimer) clearTimeout(mousewheelTimer); else d3_selection_interrupt.call(this),
       translate0 = location(center0 = center || d3.mouse(this)), zoomstarted(dispatch);
       mousewheelTimer = setTimeout(function() {
         mousewheelTimer = null;
@@ -3720,7 +3720,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
   d3.xhr = d3_xhrType(d3_identity);
   function d3_xhrType(response) {
     return function(url, mimeType, callback) {
-      if (arguments.length === 2 && typeof mimeType === "function") callback = mimeType, 
+      if (arguments.length === 2 && typeof mimeType === "function") callback = mimeType,
       mimeType = null;
       return d3_xhr(url, mimeType, response, callback);
     };
@@ -4561,7 +4561,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
     return n ? (date.y = d3_time_expandYear(+n[0]), i + n[0].length) : -1;
   }
   function d3_time_parseZone(date, string, i) {
-    return /^[+-]\d{4}$/.test(string = string.slice(i, i + 5)) ? (date.Z = -string, 
+    return /^[+-]\d{4}$/.test(string = string.slice(i, i + 5)) ? (date.Z = -string,
     i + 5) : -1;
   }
   function d3_time_expandYear(d) {
@@ -4754,7 +4754,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
     var λ00, φ00, λ0, cosφ0, sinφ0;
     d3_geo_area.point = function(λ, φ) {
       d3_geo_area.point = nextPoint;
-      λ0 = (λ00 = λ) * d3_radians, cosφ0 = Math.cos(φ = (φ00 = φ) * d3_radians / 2 + π / 4), 
+      λ0 = (λ00 = λ) * d3_radians, cosφ0 = Math.cos(φ = (φ00 = φ) * d3_radians / 2 + π / 4),
       sinφ0 = Math.sin(φ);
     };
     function nextPoint(λ, φ) {
@@ -6583,7 +6583,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
       return _ ? center([ -_[1], _[0] ]) : (_ = center(), [ _[1], -_[0] ]);
     };
     projection.rotate = function(_) {
-      return _ ? rotate([ _[0], _[1], _.length > 2 ? _[2] + 90 : 90 ]) : (_ = rotate(), 
+      return _ ? rotate([ _[0], _[1], _.length > 2 ? _[2] + 90 : 90 ]) : (_ = rotate(),
       [ _[0], _[1], _[2] - 90 ]);
     };
     return rotate([ 0, 0, 90 ]);
@@ -7437,7 +7437,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
     };
     quadtree.extent = function(_) {
       if (!arguments.length) return x1 == null ? null : [ [ x1, y1 ], [ x2, y2 ] ];
-      if (_ == null) x1 = y1 = x2 = y2 = null; else x1 = +_[0][0], y1 = +_[0][1], x2 = +_[1][0], 
+      if (_ == null) x1 = y1 = x2 = y2 = null; else x1 = +_[0][0], y1 = +_[0][1], x2 = +_[1][0],
       y2 = +_[1][1];
       return quadtree;
     };
@@ -9162,7 +9162,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
         return d3_layout_treemapPad(node, x);
       }
       var type;
-      pad = (padding = x) == null ? d3_layout_treemapPadNull : (type = typeof x) === "function" ? padFunction : type === "number" ? (x = [ x, x, x, x ], 
+      pad = (padding = x) == null ? d3_layout_treemapPadNull : (type = typeof x) === "function" ? padFunction : type === "number" ? (x = [ x, x, x, x ],
       padConstant) : padConstant;
       return treemap;
     };
@@ -9565,7 +9565,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
     };
     scale.rangePoints = function(x, padding) {
       if (arguments.length < 2) padding = 0;
-      var start = x[0], stop = x[1], step = domain.length < 2 ? (start = (start + stop) / 2, 
+      var start = x[0], stop = x[1], step = domain.length < 2 ? (start = (start + stop) / 2,
       0) : (stop - start) / (domain.length - 1 + padding);
       range = steps(start + step * padding / 2, step);
       rangeBand = 0;
@@ -9577,7 +9577,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
     };
     scale.rangeRoundPoints = function(x, padding) {
       if (arguments.length < 2) padding = 0;
-      var start = x[0], stop = x[1], step = domain.length < 2 ? (start = stop = Math.round((start + stop) / 2), 
+      var start = x[0], stop = x[1], step = domain.length < 2 ? (start = stop = Math.round((start + stop) / 2),
       0) : (stop - start) / (domain.length - 1 + padding) | 0;
       range = steps(start + Math.round(step * padding / 2 + (stop - start - (domain.length - 1 + padding) * step) / 2), step);
       rangeBand = 0;
@@ -10005,7 +10005,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
     return points.length < 4 ? d3_svg_lineLinear(points) : points[1] + d3_svg_lineHermite(points.slice(1, -1), d3_svg_lineCardinalTangents(points, tension));
   }
   function d3_svg_lineCardinalClosed(points, tension) {
-    return points.length < 3 ? d3_svg_lineLinearClosed(points) : points[0] + d3_svg_lineHermite((points.push(points[0]), 
+    return points.length < 3 ? d3_svg_lineLinearClosed(points) : points[0] + d3_svg_lineHermite((points.push(points[0]),
     points), d3_svg_lineCardinalTangents([ points[points.length - 2] ].concat(points, [ points[1] ]), tension));
   }
   function d3_svg_lineCardinal(points, tension) {
@@ -10778,7 +10778,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
         var g = d3.select(this);
         var scale0 = this.__chart__ || scale, scale1 = this.__chart__ = scale.copy();
         var ticks = tickValues == null ? scale1.ticks ? scale1.ticks.apply(scale1, tickArguments_) : scale1.domain() : tickValues, tickFormat = tickFormat_ == null ? scale1.tickFormat ? scale1.tickFormat.apply(scale1, tickArguments_) : d3_identity : tickFormat_, tick = g.selectAll(".tick").data(ticks, scale1), tickEnter = tick.enter().insert("g", ".domain").attr("class", "tick").style("opacity", ε), tickExit = d3.transition(tick.exit()).style("opacity", ε).remove(), tickUpdate = d3.transition(tick.order()).style("opacity", 1), tickSpacing = Math.max(innerTickSize, 0) + tickPadding, tickTransform;
-        var range = d3_scaleRange(scale1), path = g.selectAll(".domain").data([ 0 ]), pathUpdate = (path.enter().append("path").attr("class", "domain"), 
+        var range = d3_scaleRange(scale1), path = g.selectAll(".domain").data([ 0 ]), pathUpdate = (path.enter().append("path").attr("class", "domain"),
         d3.transition(path));
         tickEnter.append("line");
         tickEnter.append("text");
@@ -12409,9 +12409,9 @@ var Promise$1 = function () {
   /**
     `finally` will be invoked regardless of the promise's fate just as native
     try/catch/finally behaves
-  
+
     Synchronous example:
-  
+
     ```js
     findAuthor() {
       if (Math.random() > 0.5) {
@@ -12419,7 +12419,7 @@ var Promise$1 = function () {
       }
       return new Author();
     }
-  
+
     try {
       return findAuthor(); // succeed or fail
     } catch(error) {
@@ -12429,9 +12429,9 @@ var Promise$1 = function () {
       // doesn't affect the return value
     }
     ```
-  
+
     Asynchronous example:
-  
+
     ```js
     findAuthor().catch(function(reason){
       return findOtherAuther();
@@ -12439,7 +12439,7 @@ var Promise$1 = function () {
       // author was either found, or not
     });
     ```
-  
+
     @method finally
     @param {Function} callback
     @return {Promise}
@@ -12855,7 +12855,7 @@ function fromRotationTranslation(out, q, v) {
     out[13] = v[1];
     out[14] = v[2];
     out[15] = 1;
-    
+
     return out;
 };
 },{}],27:[function(_dereq_,module,exports){
@@ -13167,8 +13167,8 @@ function invert(out, a) {
         // Calculate the determinant
         det = b00 * b11 - b01 * b10 + b02 * b09 + b03 * b08 - b04 * b07 + b05 * b06;
 
-    if (!det) { 
-        return null; 
+    if (!det) {
+        return null;
     }
     det = 1.0 / det;
 
@@ -13300,7 +13300,7 @@ function multiply(out, a, b) {
         a30 = a[12], a31 = a[13], a32 = a[14], a33 = a[15];
 
     // Cache only the current line of the second matrix
-    var b0  = b[0], b1 = b[1], b2 = b[2], b3 = b[3];  
+    var b0  = b[0], b1 = b[1], b2 = b[2], b3 = b[3];
     out[0] = b0*a00 + b1*a10 + b2*a20 + b3*a30;
     out[1] = b0*a01 + b1*a11 + b2*a21 + b3*a31;
     out[2] = b0*a02 + b1*a12 + b2*a22 + b3*a32;
@@ -13462,7 +13462,7 @@ function rotate(out, a, rad, axis) {
         b20, b21, b22;
 
     if (Math.abs(len) < 0.000001) { return null; }
-    
+
     len = 1 / len;
     x *= len;
     y *= len;
@@ -13682,7 +13682,7 @@ module.exports = str;
 function str(a) {
     return 'mat4(' + a[0] + ', ' + a[1] + ', ' + a[2] + ', ' + a[3] + ', ' +
                     a[4] + ', ' + a[5] + ', ' + a[6] + ', ' + a[7] + ', ' +
-                    a[8] + ', ' + a[9] + ', ' + a[10] + ', ' + a[11] + ', ' + 
+                    a[8] + ', ' + a[9] + ', ' + a[10] + ', ' + a[11] + ', ' +
                     a[12] + ', ' + a[13] + ', ' + a[14] + ', ' + a[15] + ')';
 };
 },{}],47:[function(_dereq_,module,exports){
@@ -13771,7 +13771,7 @@ function transpose(out, a) {
         out[14] = a[11];
         out[15] = a[15];
     }
-    
+
     return out;
 };
 },{}],49:[function(_dereq_,module,exports){
@@ -17097,192 +17097,192 @@ function arrowCoordinateDescription(axis, lower, upper) {
 module.exports = templatedArray('annotation', {
     visible: {
         valType: 'boolean',
-        
+
         dflt: true,
         editType: 'calc+arraydraw',
-        
+
     },
 
     text: {
         valType: 'string',
-        
+
         editType: 'calc+arraydraw',
-        
+
     },
     textangle: {
         valType: 'angle',
         dflt: 0,
-        
+
         editType: 'calc+arraydraw',
-        
+
     },
     font: fontAttrs({
         editType: 'calc+arraydraw',
         colorEditType: 'arraydraw',
-        
+
     }),
     width: {
         valType: 'number',
         min: 1,
         dflt: null,
-        
+
         editType: 'calc+arraydraw',
-        
+
     },
     height: {
         valType: 'number',
         min: 1,
         dflt: null,
-        
+
         editType: 'calc+arraydraw',
-        
+
     },
     opacity: {
         valType: 'number',
         min: 0,
         max: 1,
         dflt: 1,
-        
+
         editType: 'arraydraw',
-        
+
     },
     align: {
         valType: 'enumerated',
         values: ['left', 'center', 'right'],
         dflt: 'center',
-        
+
         editType: 'arraydraw',
-        
+
     },
     valign: {
         valType: 'enumerated',
         values: ['top', 'middle', 'bottom'],
         dflt: 'middle',
-        
+
         editType: 'arraydraw',
-        
+
     },
     bgcolor: {
         valType: 'color',
         dflt: 'rgba(0,0,0,0)',
-        
+
         editType: 'arraydraw',
-        
+
     },
     bordercolor: {
         valType: 'color',
         dflt: 'rgba(0,0,0,0)',
-        
+
         editType: 'arraydraw',
-        
+
     },
     borderpad: {
         valType: 'number',
         min: 0,
         dflt: 1,
-        
+
         editType: 'calc+arraydraw',
-        
+
     },
     borderwidth: {
         valType: 'number',
         min: 0,
         dflt: 1,
-        
+
         editType: 'calc+arraydraw',
-        
+
     },
     // arrow
     showarrow: {
         valType: 'boolean',
         dflt: true,
-        
+
         editType: 'calc+arraydraw',
-        
+
     },
     arrowcolor: {
         valType: 'color',
-        
+
         editType: 'arraydraw',
-        
+
     },
     arrowhead: {
         valType: 'integer',
         min: 0,
         max: ARROWPATHS.length,
         dflt: 1,
-        
+
         editType: 'arraydraw',
-        
+
     },
     startarrowhead: {
         valType: 'integer',
         min: 0,
         max: ARROWPATHS.length,
         dflt: 1,
-        
+
         editType: 'arraydraw',
-        
+
     },
     arrowside: {
         valType: 'flaglist',
         flags: ['end', 'start'],
         extras: ['none'],
         dflt: 'end',
-        
+
         editType: 'arraydraw',
-        
+
     },
     arrowsize: {
         valType: 'number',
         min: 0.3,
         dflt: 1,
-        
+
         editType: 'calc+arraydraw',
-        
+
     },
     startarrowsize: {
         valType: 'number',
         min: 0.3,
         dflt: 1,
-        
+
         editType: 'calc+arraydraw',
-        
+
     },
     arrowwidth: {
         valType: 'number',
         min: 0.1,
-        
+
         editType: 'calc+arraydraw',
-        
+
     },
     standoff: {
         valType: 'number',
         min: 0,
         dflt: 0,
-        
+
         editType: 'calc+arraydraw',
-        
+
     },
     startstandoff: {
         valType: 'number',
         min: 0,
         dflt: 0,
-        
+
         editType: 'calc+arraydraw',
-        
+
     },
     ax: {
         valType: 'any',
-        
+
         editType: 'calc+arraydraw',
-        
+
     },
     ay: {
         valType: 'any',
-        
+
         editType: 'calc+arraydraw',
-        
+
     },
     axref: {
         valType: 'enumerated',
@@ -17291,9 +17291,9 @@ module.exports = templatedArray('annotation', {
             'pixel',
             cartesianConstants.idRegex.x.toString()
         ],
-        
+
         editType: 'calc',
-        
+
     },
     ayref: {
         valType: 'enumerated',
@@ -17302,9 +17302,9 @@ module.exports = templatedArray('annotation', {
             'pixel',
             cartesianConstants.idRegex.y.toString()
         ],
-        
+
         editType: 'calc',
-        
+
     },
     // positioning
     xref: {
@@ -17313,30 +17313,30 @@ module.exports = templatedArray('annotation', {
             'paper',
             cartesianConstants.idRegex.x.toString()
         ],
-        
+
         editType: 'calc',
-        
+
     },
     x: {
         valType: 'any',
-        
+
         editType: 'calc+arraydraw',
-        
+
     },
     xanchor: {
         valType: 'enumerated',
         values: ['auto', 'left', 'center', 'right'],
         dflt: 'auto',
-        
+
         editType: 'calc+arraydraw',
-        
+
     },
     xshift: {
         valType: 'number',
         dflt: 0,
-        
+
         editType: 'calc+arraydraw',
-        
+
     },
     yref: {
         valType: 'enumerated',
@@ -17344,90 +17344,90 @@ module.exports = templatedArray('annotation', {
             'paper',
             cartesianConstants.idRegex.y.toString()
         ],
-        
+
         editType: 'calc',
-        
+
     },
     y: {
         valType: 'any',
-        
+
         editType: 'calc+arraydraw',
-        
+
     },
     yanchor: {
         valType: 'enumerated',
         values: ['auto', 'top', 'middle', 'bottom'],
         dflt: 'auto',
-        
+
         editType: 'calc+arraydraw',
-        
+
     },
     yshift: {
         valType: 'number',
         dflt: 0,
-        
+
         editType: 'calc+arraydraw',
-        
+
     },
     clicktoshow: {
         valType: 'enumerated',
         values: [false, 'onoff', 'onout'],
         dflt: false,
-        
+
         editType: 'arraydraw',
-        
+
     },
     xclick: {
         valType: 'any',
-        
+
         editType: 'arraydraw',
-        
+
     },
     yclick: {
         valType: 'any',
-        
+
         editType: 'arraydraw',
-        
+
     },
     hovertext: {
         valType: 'string',
-        
+
         editType: 'arraydraw',
-        
+
     },
     hoverlabel: {
         bgcolor: {
             valType: 'color',
-            
+
             editType: 'arraydraw',
-            
+
         },
         bordercolor: {
             valType: 'color',
-            
+
             editType: 'arraydraw',
-            
+
         },
         font: fontAttrs({
             editType: 'arraydraw',
-            
+
         }),
         editType: 'arraydraw'
     },
     captureevents: {
         valType: 'boolean',
-        
+
         editType: 'arraydraw',
-        
+
     },
     editType: 'calc',
 
     _deprecated: {
         ref: {
             valType: 'string',
-            
+
             editType: 'calc',
-            
+
         }
     }
 });
@@ -18882,28 +18882,28 @@ module.exports = overrideAll(templatedArray('annotation', {
     visible: annAttrs.visible,
     x: {
         valType: 'any',
-        
-        
+
+
     },
     y: {
         valType: 'any',
-        
-        
+
+
     },
     z: {
         valType: 'any',
-        
-        
+
+
     },
     ax: {
         valType: 'number',
-        
-        
+
+
     },
     ay: {
         valType: 'number',
-        
-        
+
+
     },
 
     xanchor: annAttrs.xanchor,
@@ -19426,82 +19426,82 @@ module.exports = overrideAll({
 // TODO: only right is supported currently
 //     orient: {
 //         valType: 'enumerated',
-//         
+//
 //         values: ['left', 'right', 'top', 'bottom'],
 //         dflt: 'right',
-//         
+//
 //     },
     thicknessmode: {
         valType: 'enumerated',
         values: ['fraction', 'pixels'],
-        
+
         dflt: 'pixels',
-        
+
     },
     thickness: {
         valType: 'number',
-        
+
         min: 0,
         dflt: 30,
-        
+
     },
     lenmode: {
         valType: 'enumerated',
         values: ['fraction', 'pixels'],
-        
+
         dflt: 'fraction',
-        
+
     },
     len: {
         valType: 'number',
         min: 0,
         dflt: 1,
-        
-        
+
+
     },
     x: {
         valType: 'number',
         dflt: 1.02,
         min: -2,
         max: 3,
-        
-        
+
+
     },
     xanchor: {
         valType: 'enumerated',
         values: ['left', 'center', 'right'],
         dflt: 'left',
-        
-        
+
+
     },
     xpad: {
         valType: 'number',
-        
+
         min: 0,
         dflt: 10,
-        
+
     },
     y: {
         valType: 'number',
-        
+
         dflt: 0.5,
         min: -2,
         max: 3,
-        
+
     },
     yanchor: {
         valType: 'enumerated',
         values: ['top', 'middle', 'bottom'],
-        
+
         dflt: 'middle',
-        
+
     },
     ypad: {
         valType: 'number',
-        
+
         min: 0,
         dflt: 10,
-        
+
     },
     // a possible line around the bar itself
     outlinecolor: axesAttrs.linecolor,
@@ -19511,16 +19511,16 @@ module.exports = overrideAll({
     bordercolor: axesAttrs.linecolor,
     borderwidth: {
         valType: 'number',
-        
+
         min: 0,
         dflt: 0,
-        
+
     },
     bgcolor: {
         valType: 'color',
-        
+
         dflt: 'rgba(0,0,0,0)',
-        
+
     },
     // tick and title properties named and function exactly as in axes
     tickmode: axesAttrs.tickmode,
@@ -19538,15 +19538,15 @@ module.exports = overrideAll({
             'outside bottom', 'inside bottom'
         ],
         dflt: 'outside',
-        
-        
+
+
     },
     ticklen: axesAttrs.ticklen,
     tickwidth: axesAttrs.tickwidth,
     tickcolor: axesAttrs.tickcolor,
     showticklabels: axesAttrs.showticklabels,
     tickfont: fontAttrs({
-        
+
     }),
     tickangle: axesAttrs.tickangle,
     tickformat: axesAttrs.tickformat,
@@ -19562,36 +19562,36 @@ module.exports = overrideAll({
     title: {
         text: {
             valType: 'string',
-            
-            
+
+
         },
         font: fontAttrs({
-            
+
         }),
         side: {
             valType: 'enumerated',
             values: ['right', 'top', 'bottom'],
-            
+
             dflt: 'top',
-            
+
         }
     },
 
     _deprecated: {
         title: {
             valType: 'string',
-            
-            
+
+
         },
         titlefont: fontAttrs({
-            
+
         }),
         titleside: {
             valType: 'enumerated',
             values: ['right', 'top', 'bottom'],
-            
+
             dflt: 'top',
-            
+
         }
     }
 }, 'colorbars', 'from-root');
@@ -20578,9 +20578,9 @@ module.exports = function colorScaleAttrs(context, opts) {
         attrs.color = {
             valType: 'color',
             arrayOk: true,
-            
+
             editType: editTypeOverride || 'style',
-            
+
         };
 
         if(opts.anim) {
@@ -20590,74 +20590,74 @@ module.exports = function colorScaleAttrs(context, opts) {
 
     attrs[auto] = {
         valType: 'boolean',
-        
+
         dflt: true,
         editType: 'calc',
         impliedEdits: autoImpliedEdits,
-        
+
     };
 
     attrs[min] = {
         valType: 'number',
-        
+
         dflt: null,
         editType: editTypeOverride || 'plot',
         impliedEdits: minmaxImpliedEdits,
-        
+
     };
 
     attrs[max] = {
         valType: 'number',
-        
+
         dflt: null,
         editType: editTypeOverride || 'plot',
         impliedEdits: minmaxImpliedEdits,
-        
+
     };
 
     attrs[mid] = {
         valType: 'number',
-        
+
         dflt: null,
         editType: 'calc',
         impliedEdits: autoImpliedEdits,
-        
+
     };
 
     attrs.colorscale = {
         valType: 'colorscale',
-        
+
         editType: 'calc',
         dflt: colorscaleDflt,
         impliedEdits: {autocolorscale: false},
-        
+
     };
 
     attrs.autocolorscale = {
         valType: 'boolean',
-        
+
         // gets overrode in 'heatmap' & 'surface' for backwards comp.
         dflt: opts.autoColorDflt === false ? false : true,
         editType: 'calc',
         impliedEdits: {colorscale: undefined},
-        
+
     };
 
     attrs.reversescale = {
         valType: 'boolean',
-        
+
         dflt: false,
         editType: 'plot',
-        
+
     };
 
     if(!noScale) {
         attrs.showscale = {
             valType: 'boolean',
-            
+
             dflt: showScaleDflt,
             editType: 'calc',
-            
+
         };
 
         attrs.colorbar = colorbarAttrs;
@@ -20666,11 +20666,11 @@ module.exports = function colorScaleAttrs(context, opts) {
     if(!opts.noColorAxis) {
         attrs.coloraxis = {
             valType: 'subplotid',
-            
+
             regex: counterRegex('coloraxis'),
             dflt: null,
             editType: 'calc',
-            
+
         };
     }
 
@@ -21267,23 +21267,23 @@ module.exports = {
         sequential: {
             valType: 'colorscale',
             dflt: scales.Reds,
-            
+
             editType: 'calc',
-            
+
         },
         sequentialminus: {
             valType: 'colorscale',
             dflt: scales.Blues,
-            
+
             editType: 'calc',
-            
+
         },
         diverging: {
             valType: 'colorscale',
             dflt: scales.RdBu,
-            
+
             editType: 'calc',
-            
+
         }
     },
 
@@ -21293,7 +21293,7 @@ module.exports = {
         // support yaxis, yaxis2, yaxis3, ... counters
         _isSubplotObj: true,
         editType: 'calc',
-        
+
     }, colorScaleAttrs('', {
         colorAttr: 'corresponding trace color array(s)',
         noColorAxis: true,
@@ -22053,9 +22053,9 @@ exports.dash = {
     // dash lengths in px, and it will be honored
     values: ['solid', 'dot', 'dash', 'longdash', 'dashdot', 'longdashdot'],
     dflt: 'solid',
-    
+
     editType: 'style',
-    
+
 };
 
 },{}],104:[function(_dereq_,module,exports){
@@ -23834,102 +23834,102 @@ module.exports = {
 module.exports = {
     visible: {
         valType: 'boolean',
-        
+
         editType: 'calc',
-        
+
     },
     type: {
         valType: 'enumerated',
         values: ['percent', 'constant', 'sqrt', 'data'],
-        
+
         editType: 'calc',
-        
+
     },
     symmetric: {
         valType: 'boolean',
-        
+
         editType: 'calc',
-        
+
     },
     array: {
         valType: 'data_array',
         editType: 'calc',
-        
+
     },
     arrayminus: {
         valType: 'data_array',
         editType: 'calc',
-        
+
     },
     value: {
         valType: 'number',
         min: 0,
         dflt: 10,
-        
+
         editType: 'calc',
-        
+
     },
     valueminus: {
         valType: 'number',
         min: 0,
         dflt: 10,
-        
+
         editType: 'calc',
-        
+
     },
     traceref: {
         valType: 'integer',
         min: 0,
         dflt: 0,
-        
+
         editType: 'style'
     },
     tracerefminus: {
         valType: 'integer',
         min: 0,
         dflt: 0,
-        
+
         editType: 'style'
     },
     copy_ystyle: {
         valType: 'boolean',
-        
+
         editType: 'plot'
     },
     copy_zstyle: {
         valType: 'boolean',
-        
+
         editType: 'style'
     },
     color: {
         valType: 'color',
-        
+
         editType: 'style',
-        
+
     },
     thickness: {
         valType: 'number',
         min: 0,
         dflt: 2,
-        
+
         editType: 'style',
-        
+
     },
     width: {
         valType: 'number',
         min: 0,
-        
+
         editType: 'plot',
-        
+
     },
     editType: 'calc',
 
     _deprecated: {
         opacity: {
             valType: 'number',
-            
+
             editType: 'style',
-            
+
         }
     }
 };
@@ -24493,16 +24493,16 @@ module.exports = {
     hoverlabel: {
         bgcolor: extendFlat({}, hoverLabelAttrs.bgcolor, {
             arrayOk: true,
-            
+
         }),
         bordercolor: extendFlat({}, hoverLabelAttrs.bordercolor, {
             arrayOk: true,
-            
+
         }),
         font: fontAttrs({
             arrayOk: true,
             editType: 'none',
-            
+
         }),
         align: extendFlat({}, hoverLabelAttrs.align, {arrayOk: true}),
         namelength: extendFlat({}, hoverLabelAttrs.namelength, {arrayOk: true}),
@@ -26994,7 +26994,7 @@ var constants = _dereq_('./constants');
 
 var fontAttrs = _dereq_('../../plots/font_attributes')({
     editType: 'none',
-    
+
 });
 fontAttrs.family.dflt = constants.HOVERFONT;
 fontAttrs.size.dflt = constants.HOVERFONTSIZE;
@@ -27002,16 +27002,16 @@ fontAttrs.size.dflt = constants.HOVERFONTSIZE;
 module.exports = {
     clickmode: {
         valType: 'flaglist',
-        
+
         flags: ['event', 'select'],
         dflt: 'event',
         editType: 'plot',
         extras: ['none'],
-        
+
     },
     dragmode: {
         valType: 'enumerated',
-        
+
         values: [
             'zoom',
             'pan',
@@ -27028,69 +27028,69 @@ module.exports = {
         ],
         dflt: 'zoom',
         editType: 'modebar',
-        
+
     },
     hovermode: {
         valType: 'enumerated',
-        
+
         values: ['x', 'y', 'closest', false, 'x unified', 'y unified'],
         editType: 'modebar',
-        
+
     },
     hoverdistance: {
         valType: 'integer',
         min: -1,
         dflt: 20,
-        
+
         editType: 'none',
-        
+
     },
     spikedistance: {
         valType: 'integer',
         min: -1,
         dflt: 20,
-        
+
         editType: 'none',
-        
+
     },
     hoverlabel: {
         bgcolor: {
             valType: 'color',
-            
+
             editType: 'none',
-            
+
         },
         bordercolor: {
             valType: 'color',
-            
+
             editType: 'none',
-            
+
         },
         font: fontAttrs,
         align: {
             valType: 'enumerated',
             values: ['left', 'right', 'auto'],
             dflt: 'auto',
-            
+
             editType: 'none',
-            
+
         },
         namelength: {
             valType: 'integer',
             min: -1,
             dflt: 15,
-            
+
             editType: 'none',
-            
+
         },
         editType: 'none'
     },
     selectdirection: {
         valType: 'enumerated',
-        
+
         values: ['h', 'v', 'd', 'any'],
         dflt: 'any',
-        
+
         editType: 'none'
     }
 };
@@ -27187,92 +27187,92 @@ var gridAttrs = {
     rows: {
         valType: 'integer',
         min: 1,
-        
+
         editType: 'plot',
-        
+
     },
     roworder: {
         valType: 'enumerated',
         values: ['top to bottom', 'bottom to top'],
         dflt: 'top to bottom',
-        
+
         editType: 'plot',
-        
+
     },
     columns: {
         valType: 'integer',
         min: 1,
-        
+
         editType: 'plot',
-        
+
     },
     subplots: {
         valType: 'info_array',
         freeLength: true,
         dimensions: 2,
         items: {valType: 'enumerated', values: [counterRegex('xy').toString(), ''], editType: 'plot'},
-        
+
         editType: 'plot',
-        
+
     },
     xaxes: {
         valType: 'info_array',
         freeLength: true,
         items: {valType: 'enumerated', values: [cartesianIdRegex.x.toString(), ''], editType: 'plot'},
-        
+
         editType: 'plot',
-        
+
     },
     yaxes: {
         valType: 'info_array',
         freeLength: true,
         items: {valType: 'enumerated', values: [cartesianIdRegex.y.toString(), ''], editType: 'plot'},
-        
+
         editType: 'plot',
-        
+
     },
     pattern: {
         valType: 'enumerated',
         values: ['independent', 'coupled'],
         dflt: 'coupled',
-        
+
         editType: 'plot',
-        
+
     },
     xgap: {
         valType: 'number',
         min: 0,
         max: 1,
-        
+
         editType: 'plot',
-        
+
     },
     ygap: {
         valType: 'number',
         min: 0,
         max: 1,
-        
+
         editType: 'plot',
-        
+
     },
     domain: domainAttrs({name: 'grid', editType: 'plot', noGridCell: true}, {
-        
+
     }),
     xside: {
         valType: 'enumerated',
         values: ['bottom', 'bottom plot', 'top plot', 'top'],
         dflt: 'bottom plot',
-        
+
         editType: 'plot',
-        
+
     },
     yside: {
         valType: 'enumerated',
         values: ['left', 'left plot', 'right plot', 'right'],
         dflt: 'left plot',
-        
+
         editType: 'plot',
-        
+
     },
     editType: 'plot'
 };
@@ -27559,95 +27559,95 @@ var axisPlaceableObjs = _dereq_('../../constants/axis_placeable_objects');
 module.exports = templatedArray('image', {
     visible: {
         valType: 'boolean',
-        
+
         dflt: true,
         editType: 'arraydraw',
-        
+
     },
 
     source: {
         valType: 'string',
-        
+
         editType: 'arraydraw',
-        
+
     },
 
     layer: {
         valType: 'enumerated',
         values: ['below', 'above'],
         dflt: 'above',
-        
+
         editType: 'arraydraw',
-        
+
     },
 
     sizex: {
         valType: 'number',
-        
+
         dflt: 0,
         editType: 'arraydraw',
-        
+
     },
 
     sizey: {
         valType: 'number',
-        
+
         dflt: 0,
         editType: 'arraydraw',
-        
+
     },
 
     sizing: {
         valType: 'enumerated',
         values: ['fill', 'contain', 'stretch'],
         dflt: 'contain',
-        
+
         editType: 'arraydraw',
-        
+
     },
 
     opacity: {
         valType: 'number',
-        
+
         min: 0,
         max: 1,
         dflt: 1,
         editType: 'arraydraw',
-        
+
     },
 
     x: {
         valType: 'any',
-        
+
         dflt: 0,
         editType: 'arraydraw',
-        
+
     },
 
     y: {
         valType: 'any',
-        
+
         dflt: 0,
         editType: 'arraydraw',
-        
+
     },
 
     xanchor: {
         valType: 'enumerated',
         values: ['left', 'center', 'right'],
         dflt: 'left',
-        
+
         editType: 'arraydraw',
-        
+
     },
 
     yanchor: {
         valType: 'enumerated',
         values: ['top', 'middle', 'bottom'],
         dflt: 'top',
-        
+
         editType: 'arraydraw',
-        
+
     },
 
     xref: {
@@ -27657,9 +27657,9 @@ module.exports = templatedArray('image', {
             cartesianConstants.idRegex.x.toString()
         ],
         dflt: 'paper',
-        
+
         editType: 'arraydraw',
-        
+
     },
 
     yref: {
@@ -27669,9 +27669,9 @@ module.exports = templatedArray('image', {
             cartesianConstants.idRegex.y.toString()
         ],
         dflt: 'paper',
-        
+
         editType: 'arraydraw',
-        
+
     },
     editType: 'arraydraw'
 });
@@ -28122,150 +28122,150 @@ var colorAttrs = _dereq_('../color/attributes');
 module.exports = {
     bgcolor: {
         valType: 'color',
-        
+
         editType: 'legend',
-        
+
     },
     bordercolor: {
         valType: 'color',
         dflt: colorAttrs.defaultLine,
-        
+
         editType: 'legend',
-        
+
     },
     borderwidth: {
         valType: 'number',
         min: 0,
         dflt: 0,
-        
+
         editType: 'legend',
-        
+
     },
     font: fontAttrs({
         editType: 'legend',
-        
+
     }),
     orientation: {
         valType: 'enumerated',
         values: ['v', 'h'],
         dflt: 'v',
-        
+
         editType: 'legend',
-        
+
     },
     traceorder: {
         valType: 'flaglist',
         flags: ['reversed', 'grouped'],
         extras: ['normal'],
-        
+
         editType: 'legend',
-        
+
     },
     tracegroupgap: {
         valType: 'number',
         min: 0,
         dflt: 10,
-        
+
         editType: 'legend',
-        
+
     },
     itemsizing: {
         valType: 'enumerated',
         values: ['trace', 'constant'],
         dflt: 'trace',
-        
+
         editType: 'legend',
-        
+
     },
     itemwidth: {
         valType: 'number',
         min: 30,
         dflt: 30,
-        
+
         editType: 'legend',
-        
+
     },
 
     itemclick: {
         valType: 'enumerated',
         values: ['toggle', 'toggleothers', false],
         dflt: 'toggle',
-        
+
         editType: 'legend',
-        
+
     },
     itemdoubleclick: {
         valType: 'enumerated',
         values: ['toggle', 'toggleothers', false],
         dflt: 'toggleothers',
-        
+
         editType: 'legend',
-        
+
     },
 
     x: {
         valType: 'number',
         min: -2,
         max: 3,
-        
+
         editType: 'legend',
-        
+
     },
     xanchor: {
         valType: 'enumerated',
         values: ['auto', 'left', 'center', 'right'],
         dflt: 'left',
-        
+
         editType: 'legend',
-        
+
     },
     y: {
         valType: 'number',
         min: -2,
         max: 3,
-        
+
         editType: 'legend',
-        
+
     },
     yanchor: {
         valType: 'enumerated',
         values: ['auto', 'top', 'middle', 'bottom'],
-        
+
         editType: 'legend',
-        
+
     },
     uirevision: {
         valType: 'any',
-        
+
         editType: 'none',
-        
+
     },
     valign: {
         valType: 'enumerated',
         values: ['top', 'middle', 'bottom'],
         dflt: 'middle',
-        
+
         editType: 'legend',
-        
+
     },
     title: {
         text: {
             valType: 'string',
             dflt: '',
-            
+
             editType: 'legend',
-            
+
         },
         font: fontAttrs({
             editType: 'legend',
-            
+
         }),
         side: {
             valType: 'enumerated',
             values: ['top', 'left', 'top left'],
-            
+
             editType: 'legend',
-            
+
         },
         editType: 'legend',
     },
@@ -31668,51 +31668,51 @@ var templatedArray = _dereq_('../../plot_api/plot_template').templatedArray;
 var buttonAttrs = templatedArray('button', {
     visible: {
         valType: 'boolean',
-        
+
         dflt: true,
         editType: 'plot',
-        
+
     },
     step: {
         valType: 'enumerated',
-        
+
         values: ['month', 'year', 'day', 'hour', 'minute', 'second', 'all'],
         dflt: 'month',
         editType: 'plot',
-        
+
     },
     stepmode: {
         valType: 'enumerated',
-        
+
         values: ['backward', 'todate'],
         dflt: 'backward',
         editType: 'plot',
-        
+
     },
     count: {
         valType: 'number',
-        
+
         min: 0,
         dflt: 1,
         editType: 'plot',
-        
+
     },
     label: {
         valType: 'string',
-        
+
         editType: 'plot',
-        
+
     },
     editType: 'plot',
-    
+
 });
 
 module.exports = {
     visible: {
         valType: 'boolean',
-        
+
         editType: 'plot',
-        
+
     },
 
     buttons: buttonAttrs,
@@ -31721,67 +31721,67 @@ module.exports = {
         valType: 'number',
         min: -2,
         max: 3,
-        
+
         editType: 'plot',
-        
+
     },
     xanchor: {
         valType: 'enumerated',
         values: ['auto', 'left', 'center', 'right'],
         dflt: 'left',
-        
+
         editType: 'plot',
-        
+
     },
     y: {
         valType: 'number',
         min: -2,
         max: 3,
-        
+
         editType: 'plot',
-        
+
     },
     yanchor: {
         valType: 'enumerated',
         values: ['auto', 'top', 'middle', 'bottom'],
         dflt: 'bottom',
-        
+
         editType: 'plot',
-        
+
     },
 
     font: fontAttrs({
         editType: 'plot',
-        
+
     }),
 
     bgcolor: {
         valType: 'color',
         dflt: colorAttrs.lightLine,
-        
+
         editType: 'plot',
-        
+
     },
     activecolor: {
         valType: 'color',
-        
+
         editType: 'plot',
-        
+
     },
     bordercolor: {
         valType: 'color',
         dflt: colorAttrs.defaultLine,
-        
+
         editType: 'plot',
-        
+
     },
     borderwidth: {
         valType: 'number',
         min: 0,
         dflt: 0,
-        
+
         editType: 'plot',
-        
+
     },
     editType: 'plot'
 };
@@ -32260,59 +32260,59 @@ module.exports = {
     bgcolor: {
         valType: 'color',
         dflt: colorAttributes.background,
-        
+
         editType: 'plot',
-        
+
     },
     bordercolor: {
         valType: 'color',
         dflt: colorAttributes.defaultLine,
-        
+
         editType: 'plot',
-        
+
     },
     borderwidth: {
         valType: 'integer',
         dflt: 0,
         min: 0,
-        
+
         editType: 'plot',
-        
+
     },
     autorange: {
         valType: 'boolean',
         dflt: true,
-        
+
         editType: 'calc',
         impliedEdits: {'range[0]': undefined, 'range[1]': undefined},
-        
+
     },
     range: {
         valType: 'info_array',
-        
+
         items: [
             {valType: 'any', editType: 'calc', impliedEdits: {'^autorange': false}},
             {valType: 'any', editType: 'calc', impliedEdits: {'^autorange': false}}
         ],
         editType: 'calc',
         impliedEdits: {'autorange': false},
-        
+
     },
     thickness: {
         valType: 'number',
         dflt: 0.15,
         min: 0,
         max: 1,
-        
+
         editType: 'plot',
-        
+
     },
     visible: {
         valType: 'boolean',
         dflt: true,
-        
+
         editType: 'calc',
-        
+
     },
     editType: 'calc'
 };
@@ -33272,19 +33272,19 @@ module.exports = {
         valType: 'enumerated',
         values: ['auto', 'fixed', 'match'],
         dflt: 'match',
-        
+
         editType: 'calc',
-        
+
     },
     range: {
         valType: 'info_array',
-        
+
         items: [
             {valType: 'any', editType: 'plot'},
             {valType: 'any', editType: 'plot'}
         ],
         editType: 'plot',
-        
+
     },
     editType: 'calc'
 };
@@ -33310,94 +33310,94 @@ var axisPlaceableObjs = _dereq_('../../constants/axis_placeable_objects');
 module.exports = templatedArray('shape', {
     visible: {
         valType: 'boolean',
-        
+
         dflt: true,
         editType: 'calc+arraydraw',
-        
+
     },
 
     type: {
         valType: 'enumerated',
         values: ['circle', 'rect', 'path', 'line'],
-        
+
         editType: 'calc+arraydraw',
-        
+
     },
 
     layer: {
         valType: 'enumerated',
         values: ['below', 'above'],
         dflt: 'above',
-        
+
         editType: 'arraydraw',
-        
+
     },
 
     xref: extendFlat({}, annAttrs.xref, {
-        
+
     }),
     xsizemode: {
         valType: 'enumerated',
         values: ['scaled', 'pixel'],
         dflt: 'scaled',
-        
+
         editType: 'calc+arraydraw',
-        
+
     },
     xanchor: {
         valType: 'any',
-        
+
         editType: 'calc+arraydraw',
-        
+
     },
     x0: {
         valType: 'any',
-        
+
         editType: 'calc+arraydraw',
-        
+
     },
     x1: {
         valType: 'any',
-        
+
         editType: 'calc+arraydraw',
-        
+
     },
 
     yref: extendFlat({}, annAttrs.yref, {
-        
+
     }),
     ysizemode: {
         valType: 'enumerated',
         values: ['scaled', 'pixel'],
         dflt: 'scaled',
-        
+
         editType: 'calc+arraydraw',
-        
+
     },
     yanchor: {
         valType: 'any',
-        
+
         editType: 'calc+arraydraw',
-        
+
     },
     y0: {
         valType: 'any',
-        
+
         editType: 'calc+arraydraw',
-        
+
     },
     y1: {
         valType: 'any',
-        
+
         editType: 'calc+arraydraw',
-        
+
     },
 
     path: {
         valType: 'string',
-        
+
         editType: 'calc+arraydraw',
-        
+
     },
 
     opacity: {
@@ -33405,38 +33405,38 @@ module.exports = templatedArray('shape', {
         min: 0,
         max: 1,
         dflt: 1,
-        
+
         editType: 'arraydraw',
-        
+
     },
     line: {
         color: extendFlat({}, scatterLineAttrs.color, {editType: 'arraydraw'}),
         width: extendFlat({}, scatterLineAttrs.width, {editType: 'calc+arraydraw'}),
         dash: extendFlat({}, dash, {editType: 'arraydraw'}),
-        
+
         editType: 'calc+arraydraw'
     },
     fillcolor: {
         valType: 'color',
         dflt: 'rgba(0,0,0,0)',
-        
+
         editType: 'arraydraw',
-        
+
     },
     fillrule: {
         valType: 'enumerated',
         values: ['evenodd', 'nonzero'],
         dflt: 'evenodd',
-        
+
         editType: 'arraydraw',
-        
+
     },
     editable: {
         valType: 'boolean',
-        
+
         dflt: false,
         editType: 'calc+arraydraw',
-        
+
     },
 
     editType: 'arraydraw'
@@ -34551,63 +34551,63 @@ module.exports = {
             color: {
                 valType: 'color',
                 editType: 'none',
-                
-                
+
+
             },
             width: {
                 valType: 'number',
                 min: 0,
                 dflt: 4,
-                
+
                 editType: 'none',
-                
+
             },
             dash: extendFlat({}, dash, {
                 dflt: 'solid',
                 editType: 'none'
             }),
-            
+
             editType: 'none'
         },
         fillcolor: {
             valType: 'color',
             dflt: 'rgba(0,0,0,0)',
-            
+
             editType: 'none',
-            
+
         },
         fillrule: {
             valType: 'enumerated',
             values: ['evenodd', 'nonzero'],
             dflt: 'evenodd',
-            
+
             editType: 'none',
-            
+
         },
         opacity: {
             valType: 'number',
             min: 0,
             max: 1,
             dflt: 1,
-            
+
             editType: 'none',
-            
+
         },
         layer: {
             valType: 'enumerated',
             values: ['below', 'above'],
             dflt: 'above',
-            
+
             editType: 'none',
-            
+
         },
         drawdirection: {
             valType: 'enumerated',
-            
+
             values: ['ortho', 'horizontal', 'vertical', 'diagonal'],
             dflt: 'diagonal',
             editType: 'none',
-            
+
         },
 
         editType: 'none'
@@ -34617,18 +34617,18 @@ module.exports = {
         fillcolor: {
             valType: 'color',
             dflt: 'rgb(255,0,255)',
-            
+
             editType: 'none',
-            
+
         },
         opacity: {
             valType: 'number',
             min: 0,
             max: 1,
             dflt: 0.5,
-            
+
             editType: 'none',
-            
+
         },
         editType: 'none'
     }
@@ -35790,60 +35790,60 @@ var constants = _dereq_('./constants');
 var stepsAttrs = templatedArray('step', {
     visible: {
         valType: 'boolean',
-        
+
         dflt: true,
-        
+
     },
     method: {
         valType: 'enumerated',
         values: ['restyle', 'relayout', 'animate', 'update', 'skip'],
         dflt: 'restyle',
-        
-        
+
+
     },
     args: {
         valType: 'info_array',
-        
+
         freeLength: true,
         items: [
             { valType: 'any' },
             { valType: 'any' },
             { valType: 'any' }
         ],
-        
+
     },
     label: {
         valType: 'string',
-        
-        
+
+
     },
     value: {
         valType: 'string',
-        
-        
+
+
     },
     execute: {
         valType: 'boolean',
-        
+
         dflt: true,
-        
+
     }
 });
 
 module.exports = overrideAll(templatedArray('slider', {
     visible: {
         valType: 'boolean',
-        
+
         dflt: true,
-        
+
     },
 
     active: {
         valType: 'number',
-        
+
         min: 0,
         dflt: 0,
-        
+
     },
 
     steps: stepsAttrs,
@@ -35851,163 +35851,163 @@ module.exports = overrideAll(templatedArray('slider', {
     lenmode: {
         valType: 'enumerated',
         values: ['fraction', 'pixels'],
-        
+
         dflt: 'fraction',
-        
+
     },
     len: {
         valType: 'number',
         min: 0,
         dflt: 1,
-        
-        
+
+
     },
     x: {
         valType: 'number',
         min: -2,
         max: 3,
         dflt: 0,
-        
-        
+
+
     },
     pad: extendDeepAll(padAttrs({editType: 'arraydraw'}), {
-        
+
     }, {t: {dflt: 20}}),
     xanchor: {
         valType: 'enumerated',
         values: ['auto', 'left', 'center', 'right'],
         dflt: 'left',
-        
-        
+
+
     },
     y: {
         valType: 'number',
         min: -2,
         max: 3,
         dflt: 0,
-        
-        
+
+
     },
     yanchor: {
         valType: 'enumerated',
         values: ['auto', 'top', 'middle', 'bottom'],
         dflt: 'top',
-        
-        
+
+
     },
 
     transition: {
         duration: {
             valType: 'number',
-            
+
             min: 0,
             dflt: 150,
-            
+
         },
         easing: {
             valType: 'enumerated',
             values: animationAttrs.transition.easing.values,
-            
+
             dflt: 'cubic-in-out',
-            
+
         }
     },
 
     currentvalue: {
         visible: {
             valType: 'boolean',
-            
+
             dflt: true,
-            
+
         },
 
         xanchor: {
             valType: 'enumerated',
             values: ['left', 'center', 'right'],
             dflt: 'left',
-            
-            
+
+
         },
 
         offset: {
             valType: 'number',
             dflt: 10,
-            
-            
+
+
         },
 
         prefix: {
             valType: 'string',
-            
-            
+
+
         },
 
         suffix: {
             valType: 'string',
-            
-            
+
+
         },
 
         font: fontAttrs({
-            
+
         })
     },
 
     font: fontAttrs({
-        
+
     }),
 
     activebgcolor: {
         valType: 'color',
-        
+
         dflt: constants.gripBgActiveColor,
-        
+
     },
     bgcolor: {
         valType: 'color',
-        
+
         dflt: constants.railBgColor,
-        
+
     },
     bordercolor: {
         valType: 'color',
         dflt: constants.railBorderColor,
-        
-        
+
+
     },
     borderwidth: {
         valType: 'number',
         min: 0,
         dflt: constants.railBorderWidth,
-        
-        
+
+
     },
     ticklen: {
         valType: 'number',
         min: 0,
         dflt: constants.tickLength,
-        
-        
+
+
     },
     tickcolor: {
         valType: 'color',
         dflt: constants.tickColor,
-        
-        
+
+
     },
     tickwidth: {
         valType: 'number',
         min: 0,
         dflt: 1,
-        
-        
+
+
     },
     minorticklen: {
         valType: 'number',
         min: 0,
         dflt: constants.minorTickLength,
-        
-        
+
+
     }
 }), 'arraydraw', 'from-root');
 
@@ -37163,49 +37163,49 @@ var templatedArray = _dereq_('../../plot_api/plot_template').templatedArray;
 var buttonsAttrs = templatedArray('button', {
     visible: {
         valType: 'boolean',
-        
-        
+
+
     },
     method: {
         valType: 'enumerated',
         values: ['restyle', 'relayout', 'animate', 'update', 'skip'],
         dflt: 'restyle',
-        
-        
+
+
     },
     args: {
         valType: 'info_array',
-        
+
         freeLength: true,
         items: [
             {valType: 'any'},
             {valType: 'any'},
             {valType: 'any'}
         ],
-        
+
     },
     args2: {
         valType: 'info_array',
-        
+
         freeLength: true,
         items: [
             {valType: 'any'},
             {valType: 'any'},
             {valType: 'any'}
         ],
-        
+
     },
     label: {
         valType: 'string',
-        
+
         dflt: '',
-        
+
     },
     execute: {
         valType: 'boolean',
-        
+
         dflt: true,
-        
+
     }
 });
 
@@ -37214,39 +37214,39 @@ module.exports = overrideAll(templatedArray('updatemenu', {
 
     visible: {
         valType: 'boolean',
-        
-        
+
+
     },
 
     type: {
         valType: 'enumerated',
         values: ['dropdown', 'buttons'],
         dflt: 'dropdown',
-        
-        
+
+
     },
 
     direction: {
         valType: 'enumerated',
         values: ['left', 'right', 'up', 'down'],
         dflt: 'down',
-        
-        
+
+
     },
 
     active: {
         valType: 'integer',
-        
+
         min: -1,
         dflt: 0,
-        
+
     },
 
     showactive: {
         valType: 'boolean',
-        
+
         dflt: true,
-        
+
     },
 
     buttons: buttonsAttrs,
@@ -37256,58 +37256,58 @@ module.exports = overrideAll(templatedArray('updatemenu', {
         min: -2,
         max: 3,
         dflt: -0.05,
-        
-        
+
+
     },
     xanchor: {
         valType: 'enumerated',
         values: ['auto', 'left', 'center', 'right'],
         dflt: 'right',
-        
-        
+
+
     },
     y: {
         valType: 'number',
         min: -2,
         max: 3,
         dflt: 1,
-        
-        
+
+
     },
     yanchor: {
         valType: 'enumerated',
         values: ['auto', 'top', 'middle', 'bottom'],
         dflt: 'top',
-        
-        
+
+
     },
 
     pad: extendFlat(padAttrs({editType: 'arraydraw'}), {
-        
+
     }),
 
     font: fontAttrs({
-        
+
     }),
 
     bgcolor: {
         valType: 'color',
-        
-        
+
+
     },
     bordercolor: {
         valType: 'color',
         dflt: colorAttrs.borderLine,
-        
-        
+
+
     },
     borderwidth: {
         valType: 'number',
         min: 0,
         dflt: 1,
-        
+
         editType: 'arraydraw',
-        
+
     }
 }), 'arraydraw', 'from-root');
 
@@ -39717,9 +39717,9 @@ var isArrayOrTypedArray = _dereq_('./array').isArrayOrTypedArray;
 exports.valObjectMeta = {
     data_array: {
         // You can use *dflt=[] to force said array to exist though.
-        
-        
-        
+
+
+
         coerceFunction: function(v, propOut, dflt) {
             // TODO maybe `v: {type: 'float32', vals: [/* ... */]}` also
             if(isArrayOrTypedArray(v)) propOut.set(v);
@@ -39727,9 +39727,9 @@ exports.valObjectMeta = {
         }
     },
     enumerated: {
-        
-        
-        
+
+
+
         coerceFunction: function(v, propOut, dflt, opts) {
             if(opts.coerceNumber) v = +v;
             if(opts.values.indexOf(v) === -1) propOut.set(dflt);
@@ -39751,18 +39751,18 @@ exports.valObjectMeta = {
         }
     },
     'boolean': {
-        
-        
-        
+
+
+
         coerceFunction: function(v, propOut, dflt) {
             if(v === true || v === false) propOut.set(v);
             else propOut.set(dflt);
         }
     },
     number: {
-        
-        
-        
+
+
+
         coerceFunction: function(v, propOut, dflt, opts) {
             if(!isNumeric(v) ||
                     (opts.min !== undefined && v < opts.min) ||
@@ -39772,9 +39772,9 @@ exports.valObjectMeta = {
         }
     },
     integer: {
-        
-        
-        
+
+
+
         coerceFunction: function(v, propOut, dflt, opts) {
             if(v % 1 || !isNumeric(v) ||
                     (opts.min !== undefined && v < opts.min) ||
@@ -39784,10 +39784,10 @@ exports.valObjectMeta = {
         }
     },
     string: {
-        
-        
+
+
         // TODO 'values shouldn't be in there (edge case: 'dash' in Scatter)
-        
+
         coerceFunction: function(v, propOut, dflt, opts) {
             if(typeof v !== 'string') {
                 var okToCoerce = (typeof v === 'number');
@@ -39799,18 +39799,18 @@ exports.valObjectMeta = {
         }
     },
     color: {
-        
-        
-        
+
+
+
         coerceFunction: function(v, propOut, dflt) {
             if(tinycolor(v).isValid()) propOut.set(v);
             else propOut.set(dflt);
         }
     },
     colorlist: {
-        
-        
-        
+
+
+
         coerceFunction: function(v, propOut, dflt) {
             function isColor(color) {
                 return tinycolor(color).isValid();
@@ -39821,17 +39821,17 @@ exports.valObjectMeta = {
         }
     },
     colorscale: {
-        
-        
-        
+
+
+
         coerceFunction: function(v, propOut, dflt) {
             propOut.set(colorscales.get(v, dflt));
         }
     },
     angle: {
-        
-        
-        
+
+
+
         coerceFunction: function(v, propOut, dflt) {
             if(v === 'auto') propOut.set('auto');
             else if(!isNumeric(v)) propOut.set(dflt);
@@ -39839,9 +39839,9 @@ exports.valObjectMeta = {
         }
     },
     subplotid: {
-        
-        
-        
+
+
+
         coerceFunction: function(v, propOut, dflt, opts) {
             var regex = opts.regex || counterRegex(dflt);
             if(typeof v === 'string' && regex.test(v)) {
@@ -39861,9 +39861,9 @@ exports.valObjectMeta = {
         }
     },
     flaglist: {
-        
-        
-        
+
+
+
         coerceFunction: function(v, propOut, dflt, opts) {
             if(typeof v !== 'string') {
                 propOut.set(dflt);
@@ -39886,23 +39886,23 @@ exports.valObjectMeta = {
         }
     },
     any: {
-        
-        
-        
+
+
+
         coerceFunction: function(v, propOut, dflt) {
             if(v === undefined) propOut.set(dflt);
             else propOut.set(v);
         }
     },
     info_array: {
-        
-        
+
+
         // set `dimensions=2` for a 2D array or '1-2' for either
         // `items` may be a single object instead of an array, in which case
         // `freeLength` must be true.
         // if `dimensions='1-2'` and items is a 1D array, then the value can
         // either be a matching 1D array or an array of such matching 1D arrays
-        
+
         coerceFunction: function(v, propOut, dflt, opts) {
             // simplified coerce function just for array items
             function coercePart(v, opts, dflt) {
@@ -46130,7 +46130,7 @@ var traceOpts = {
     valType: 'flaglist',
     extras: ['none'],
     flags: ['calc', 'clearAxisTypes', 'plot', 'style', 'markerSize', 'colorbars'],
-    
+
 };
 
 var layoutOpts = {
@@ -46140,7 +46140,7 @@ var layoutOpts = {
         'calc', 'plot', 'legend', 'ticks', 'axrange',
         'layoutstyle', 'modebar', 'camera', 'arraydraw', 'colorbars'
     ],
-    
+
 };
 
 // flags for inside restyle/relayout include a few extras
@@ -51151,94 +51151,94 @@ var configAttributes = {
     staticPlot: {
         valType: 'boolean',
         dflt: false,
-        
+
     },
 
     plotlyServerURL: {
         valType: 'string',
         dflt: '',
-        
+
     },
 
     editable: {
         valType: 'boolean',
         dflt: false,
-        
+
     },
     edits: {
         annotationPosition: {
             valType: 'boolean',
             dflt: false,
-            
+
         },
         annotationTail: {
             valType: 'boolean',
             dflt: false,
-            
+
         },
         annotationText: {
             valType: 'boolean',
             dflt: false,
-            
+
         },
         axisTitleText: {
             valType: 'boolean',
             dflt: false,
-            
+
         },
         colorbarPosition: {
             valType: 'boolean',
             dflt: false,
-            
+
         },
         colorbarTitleText: {
             valType: 'boolean',
             dflt: false,
-            
+
         },
         legendPosition: {
             valType: 'boolean',
             dflt: false,
-            
+
         },
         legendText: {
             valType: 'boolean',
             dflt: false,
-            
+
         },
         shapePosition: {
             valType: 'boolean',
             dflt: false,
-            
+
         },
         titleText: {
             valType: 'boolean',
             dflt: false,
-            
+
         }
     },
 
     autosizable: {
         valType: 'boolean',
         dflt: false,
-        
+
     },
     responsive: {
         valType: 'boolean',
         dflt: false,
-        
+
     },
     fillFrame: {
         valType: 'boolean',
         dflt: false,
-        
+
     },
     frameMargins: {
         valType: 'number',
         dflt: 0,
         min: 0,
         max: 0.5,
-        
+
     },
 
     scrollZoom: {
@@ -51246,105 +51246,105 @@ var configAttributes = {
         flags: ['cartesian', 'gl3d', 'geo', 'mapbox'],
         extras: [true, false],
         dflt: 'gl3d+geo+mapbox',
-        
+
     },
     doubleClick: {
         valType: 'enumerated',
         values: [false, 'reset', 'autosize', 'reset+autosize'],
         dflt: 'reset+autosize',
-        
+
     },
     doubleClickDelay: {
         valType: 'number',
         dflt: 300,
         min: 0,
-        
+
     },
 
     showAxisDragHandles: {
         valType: 'boolean',
         dflt: true,
-        
+
     },
     showAxisRangeEntryBoxes: {
         valType: 'boolean',
         dflt: true,
-        
+
     },
 
     showTips: {
         valType: 'boolean',
         dflt: true,
-        
+
     },
 
     showLink: {
         valType: 'boolean',
         dflt: false,
-        
+
     },
     linkText: {
         valType: 'string',
         dflt: 'Edit chart',
         noBlank: true,
-        
+
     },
     sendData: {
         valType: 'boolean',
         dflt: true,
-        
+
     },
     showSources: {
         valType: 'any',
         dflt: false,
-        
+
     },
 
     displayModeBar: {
         valType: 'enumerated',
         values: ['hover', true, false],
         dflt: 'hover',
-        
+
     },
     showSendToCloud: {
         valType: 'boolean',
         dflt: false,
-        
+
     },
     showEditInChartStudio: {
         valType: 'boolean',
         dflt: false,
-        
+
     },
     modeBarButtonsToRemove: {
         valType: 'any',
         dflt: [],
-        
+
     },
     modeBarButtonsToAdd: {
         valType: 'any',
         dflt: [],
-        
+
     },
     modeBarButtons: {
         valType: 'any',
         dflt: false,
-        
+
     },
     toImageButtonOptions: {
         valType: 'any',
         dflt: {},
-        
+
     },
     displaylogo: {
         valType: 'boolean',
         dflt: true,
-        
+
     },
     watermark: {
         valType: 'boolean',
         dflt: false,
-        
+
     },
 
     plotGlPixelRatio: {
@@ -51352,26 +51352,26 @@ var configAttributes = {
         dflt: 2,
         min: 1,
         max: 4,
-        
+
     },
 
     setBackground: {
         valType: 'any',
         dflt: 'transparent',
-        
+
     },
 
     topojsonURL: {
         valType: 'string',
         noBlank: true,
         dflt: 'https://cdn.plot.ly/',
-        
+
     },
 
     mapboxAccessToken: {
         valType: 'string',
         dflt: null,
-        
+
     },
 
     logging: {
@@ -51379,7 +51379,7 @@ var configAttributes = {
         min: 0,
         max: 2,
         dflt: 1,
-        
+
     },
 
     notifyOnLogging: {
@@ -51387,32 +51387,32 @@ var configAttributes = {
         min: 0,
         max: 2,
         dflt: 0,
-        
+
     },
 
     queueLength: {
         valType: 'integer',
         min: 0,
         dflt: 0,
-        
+
     },
 
     globalTransforms: {
         valType: 'any',
         dflt: [],
-        
+
     },
 
     locale: {
         valType: 'string',
         dflt: 'en-US',
-        
+
     },
 
     locales: {
         valType: 'any',
         dflt: {},
-        
+
     }
 };
 
@@ -51516,7 +51516,7 @@ exports.get = function() {
                 layout: editTypes.layout
             },
             impliedEdits: {
-                
+
             }
         },
 
@@ -52058,8 +52058,8 @@ function mergeValTypeAndRole(attrs) {
     function makeSrcAttr(attrName) {
         return {
             valType: 'string',
-            
-            
+
+
             editType: 'none'
         };
     }
@@ -52170,16 +52170,16 @@ var TEMPLATEITEMNAME = 'templateitemname';
 var templateAttrs = {
     name: {
         valType: 'string',
-        
+
         editType: 'none',
-        
+
     }
 };
 templateAttrs[TEMPLATEITEMNAME] = {
     valType: 'string',
-    
+
     editType: 'calc',
-    
+
 };
 
 /**
@@ -53675,33 +53675,33 @@ var attrs = {
         valType: 'enumerated',
         values: ['png', 'jpeg', 'webp', 'svg', 'full-json'],
         dflt: 'png',
-        
+
     },
     width: {
         valType: 'number',
         min: 1,
-        
+
     },
     height: {
         valType: 'number',
         min: 1,
-        
+
     },
     scale: {
         valType: 'number',
         min: 0,
         dflt: 1,
-        
+
     },
     setBackground: {
         valType: 'any',
         dflt: false,
-        
+
     },
     imageDataOnly: {
         valType: 'boolean',
         dflt: false,
-        
+
     }
 };
 
@@ -54315,46 +54315,46 @@ module.exports = {
     mode: {
         valType: 'enumerated',
         dflt: 'afterall',
-        
+
         values: ['immediate', 'next', 'afterall'],
-        
+
     },
     direction: {
         valType: 'enumerated',
-        
+
         values: ['forward', 'reverse'],
         dflt: 'forward',
-        
+
     },
     fromcurrent: {
         valType: 'boolean',
         dflt: false,
-        
-        
+
+
     },
     frame: {
         duration: {
             valType: 'number',
-            
+
             min: 0,
             dflt: 500,
-            
+
         },
         redraw: {
             valType: 'boolean',
-            
+
             dflt: true,
-            
+
         },
     },
     transition: {
         duration: {
             valType: 'number',
-            
+
             min: 0,
             dflt: 500,
             editType: 'none',
-            
+
         },
         easing: {
             valType: 'enumerated',
@@ -54397,17 +54397,17 @@ module.exports = {
                 'back-in-out',
                 'bounce-in-out'
             ],
-            
+
             editType: 'none',
-            
+
         },
         ordering: {
             valType: 'enumerated',
             values: ['layout first', 'traces first'],
             dflt: 'layout first',
-            
+
             editType: 'none',
-            
+
         }
     }
 };
@@ -54523,7 +54523,7 @@ var fxAttrs = _dereq_('../components/fx/attributes');
 module.exports = {
     type: {
         valType: 'enumerated',
-        
+
         values: [],     // listed dynamically
         dflt: 'scatter',
         editType: 'calc+clearAxisTypes',
@@ -54532,64 +54532,64 @@ module.exports = {
     visible: {
         valType: 'enumerated',
         values: [true, false, 'legendonly'],
-        
+
         dflt: true,
         editType: 'calc',
-        
+
     },
     showlegend: {
         valType: 'boolean',
-        
+
         dflt: true,
         editType: 'style',
-        
+
     },
     legendgroup: {
         valType: 'string',
-        
+
         dflt: '',
         editType: 'style',
-        
+
     },
     opacity: {
         valType: 'number',
-        
+
         min: 0,
         max: 1,
         dflt: 1,
         editType: 'style',
-        
+
     },
     name: {
         valType: 'string',
-        
+
         editType: 'style',
-        
+
     },
     uid: {
         valType: 'string',
-        
+
         editType: 'plot',
         anim: true,
-        
+
     },
     ids: {
         valType: 'data_array',
         editType: 'calc',
         anim: true,
-        
+
     },
     customdata: {
         valType: 'data_array',
         editType: 'calc',
-        
+
     },
     meta: {
         valType: 'any',
         arrayOk: true,
-        
+
         editType: 'plot',
-        
+
     },
 
     // N.B. these cannot be 'data_array' as they do not have the same length as
@@ -54599,20 +54599,20 @@ module.exports = {
     // https://github.com/plotly/plotly.js/issues/1894
     selectedpoints: {
         valType: 'any',
-        
+
         editType: 'calc',
-        
+
     },
 
     hoverinfo: {
         valType: 'flaglist',
-        
+
         flags: ['x', 'y', 'z', 'text', 'name'],
         extras: ['all', 'none', 'skip'],
         arrayOk: true,
         dflt: 'all',
         editType: 'none',
-        
+
     },
     hoverlabel: fxAttrs.hoverlabel,
     stream: {
@@ -54620,31 +54620,31 @@ module.exports = {
             valType: 'string',
             noBlank: true,
             strict: true,
-            
+
             editType: 'calc',
-            
+
         },
         maxpoints: {
             valType: 'number',
             min: 0,
             max: 10000,
             dflt: 500,
-            
+
             editType: 'calc',
-            
+
         },
         editType: 'calc'
     },
     transforms: {
         _isLinkedToArray: 'transform',
         editType: 'calc',
-        
+
     },
     uirevision: {
         valType: 'any',
-        
+
         editType: 'none',
-        
+
     }
 };
 
@@ -54755,17 +54755,17 @@ module.exports = function alignPeriod(trace, ax, axLetter, vals) {
 module.exports = {
     xaxis: {
         valType: 'subplotid',
-        
+
         dflt: 'x',
         editType: 'calc+clearAxisTypes',
-        
+
     },
     yaxis: {
         valType: 'subplotid',
-        
+
         dflt: 'y',
         editType: 'calc+clearAxisTypes',
-        
+
     }
 };
 
@@ -62944,34 +62944,34 @@ var DAY_OF_WEEK = constants.WEEKDAY_PATTERN;
 module.exports = {
     visible: {
         valType: 'boolean',
-        
+
         editType: 'plot',
-        
+
     },
     color: {
         valType: 'color',
         dflt: colorAttrs.defaultLine,
-        
+
         editType: 'ticks',
-        
+
     },
     title: {
         text: {
             valType: 'string',
-            
+
             editType: 'ticks',
-            
+
         },
         font: fontAttrs({
             editType: 'ticks',
-            
+
         }),
         standoff: {
             valType: 'number',
-            
+
             min: 0,
             editType: 'ticks',
-            
+
         },
         editType: 'ticks'
     },
@@ -62982,43 +62982,43 @@ module.exports = {
         // to gd.data like the others are.
         values: ['-', 'linear', 'log', 'date', 'category', 'multicategory'],
         dflt: '-',
-        
+
         editType: 'calc',
         // we forget when an axis has been autotyped, just writing the auto
         // value back to the input - so it doesn't make sense to template this.
         // Note: we do NOT prohibit this in `coerce`, so if someone enters a
         // type in the template explicitly it will be honored as the default.
         _noTemplating: true,
-        
+
     },
     autotypenumbers: {
         valType: 'enumerated',
         values: ['convert types', 'strict'],
         dflt: 'convert types',
-        
+
         editType: 'calc',
-        
+
     },
     autorange: {
         valType: 'enumerated',
         values: [true, false, 'reversed'],
         dflt: true,
-        
+
         editType: 'axrange',
         impliedEdits: {'range[0]': undefined, 'range[1]': undefined},
-        
+
     },
     rangemode: {
         valType: 'enumerated',
         values: ['normal', 'tozero', 'nonnegative'],
         dflt: 'normal',
-        
+
         editType: 'plot',
-        
+
     },
     range: {
         valType: 'info_array',
-        
+
         items: [
             {valType: 'any', editType: 'axrange', impliedEdits: {'^autorange': false}, anim: true},
             {valType: 'any', editType: 'axrange', impliedEdits: {'^autorange': false}, anim: true}
@@ -63026,14 +63026,14 @@ module.exports = {
         editType: 'axrange',
         impliedEdits: {'autorange': false},
         anim: true,
-        
+
     },
     fixedrange: {
         valType: 'boolean',
         dflt: false,
-        
+
         editType: 'calc',
-        
+
     },
     // scaleanchor: not used directly, just put here for reference
     // values are any opposite-letter axis id
@@ -63043,32 +63043,32 @@ module.exports = {
             constants.idRegex.x.toString(),
             constants.idRegex.y.toString()
         ],
-        
+
         editType: 'plot',
-        
+
     },
     scaleratio: {
         valType: 'number',
         min: 0,
         dflt: 1,
-        
+
         editType: 'plot',
-        
+
     },
     constrain: {
         valType: 'enumerated',
         values: ['range', 'domain'],
-        
+
         editType: 'plot',
-        
+
     },
     // constraintoward: not used directly, just put here for reference
     constraintoward: {
         valType: 'enumerated',
         values: ['left', 'center', 'right', 'top', 'middle', 'bottom'],
-        
+
         editType: 'plot',
-        
+
     },
     matches: {
         valType: 'enumerated',
@@ -63076,58 +63076,58 @@ module.exports = {
             constants.idRegex.x.toString(),
             constants.idRegex.y.toString()
         ],
-        
+
         editType: 'calc',
-        
+
     },
 
     rangebreaks: templatedArray('rangebreak', {
         enabled: {
             valType: 'boolean',
-            
+
             dflt: true,
             editType: 'calc',
-            
+
         },
 
         bounds: {
             valType: 'info_array',
-            
+
             items: [
                 {valType: 'any', editType: 'calc'},
                 {valType: 'any', editType: 'calc'}
             ],
             editType: 'calc',
-            
+
         },
 
         pattern: {
             valType: 'enumerated',
             values: [DAY_OF_WEEK, HOUR, ''],
-            
+
             editType: 'calc',
-            
+
         },
 
         values: {
             valType: 'info_array',
             freeLength: true,
-            
+
             editType: 'calc',
             items: {
                 valType: 'any',
                 editType: 'calc'
             },
-            
+
         },
         dvalue: {
             // TODO could become 'any' to add support for 'months', 'years'
             valType: 'number',
-            
+
             editType: 'calc',
             min: 0,
             dflt: ONEDAY,
-            
+
         },
 
         /*
@@ -63136,16 +63136,16 @@ module.exports = {
             min: 0,
             dflt: 0, // for *date* axes, maybe something else for *linear*
             editType: 'calc',
-            
-            
+
+
         },
         gapmode: {
             valType: 'enumerated',
             values: ['pixels', 'fraction'],
             dflt: 'pixels',
             editType: 'calc',
-            
-            
+
+
         },
         */
 
@@ -63162,65 +63162,65 @@ module.exports = {
     tickmode: {
         valType: 'enumerated',
         values: ['auto', 'linear', 'array'],
-        
+
         editType: 'ticks',
         impliedEdits: {tick0: undefined, dtick: undefined},
-        
+
     },
     nticks: {
         valType: 'integer',
         min: 0,
         dflt: 0,
-        
+
         editType: 'ticks',
-        
+
     },
     tick0: {
         valType: 'any',
-        
+
         editType: 'ticks',
         impliedEdits: {tickmode: 'linear'},
-        
+
     },
     dtick: {
         valType: 'any',
-        
+
         editType: 'ticks',
         impliedEdits: {tickmode: 'linear'},
-        
+
     },
     tickvals: {
         valType: 'data_array',
         editType: 'ticks',
-        
+
     },
     ticktext: {
         valType: 'data_array',
         editType: 'ticks',
-        
+
     },
     ticks: {
         valType: 'enumerated',
         values: ['outside', 'inside', ''],
-        
+
         editType: 'ticks',
-        
+
     },
     tickson: {
         valType: 'enumerated',
         values: ['labels', 'boundaries'],
-        
+
         dflt: 'labels',
         editType: 'ticks',
-        
+
     },
     ticklabelmode: {
         valType: 'enumerated',
         values: ['instant', 'period'],
         dflt: 'instant',
-        
+
         editType: 'ticks',
-        
+
     },
     // ticklabelposition: not used directly, as values depend on direction (similar to side)
     // left/right options are for x axes, and top/bottom options are for y axes
@@ -63234,291 +63234,291 @@ module.exports = {
             'outside bottom', 'inside bottom'
         ],
         dflt: 'outside',
-        
+
         editType: 'calc',
-        
+
     },
     mirror: {
         valType: 'enumerated',
         values: [true, 'ticks', false, 'all', 'allticks'],
         dflt: false,
-        
+
         editType: 'ticks+layoutstyle',
-        
+
     },
     ticklen: {
         valType: 'number',
         min: 0,
         dflt: 5,
-        
+
         editType: 'ticks',
-        
+
     },
     tickwidth: {
         valType: 'number',
         min: 0,
         dflt: 1,
-        
+
         editType: 'ticks',
-        
+
     },
     tickcolor: {
         valType: 'color',
         dflt: colorAttrs.defaultLine,
-        
+
         editType: 'ticks',
-        
+
     },
     showticklabels: {
         valType: 'boolean',
         dflt: true,
-        
+
         editType: 'ticks',
-        
+
     },
     automargin: {
         valType: 'boolean',
         dflt: false,
-        
+
         editType: 'ticks',
-        
+
     },
     showspikes: {
         valType: 'boolean',
         dflt: false,
-        
+
         editType: 'modebar',
-        
+
     },
     spikecolor: {
         valType: 'color',
         dflt: null,
-        
+
         editType: 'none',
-        
+
     },
     spikethickness: {
         valType: 'number',
         dflt: 3,
-        
+
         editType: 'none',
-        
+
     },
     spikedash: extendFlat({}, dash, {dflt: 'dash', editType: 'none'}),
     spikemode: {
         valType: 'flaglist',
         flags: ['toaxis', 'across', 'marker'],
-        
+
         dflt: 'toaxis',
         editType: 'none',
-        
+
     },
     spikesnap: {
         valType: 'enumerated',
         values: ['data', 'cursor', 'hovered data'],
         dflt: 'data',
-        
+
         editType: 'none',
-        
+
     },
     tickfont: fontAttrs({
         editType: 'ticks',
-        
+
     }),
     tickangle: {
         valType: 'angle',
         dflt: 'auto',
-        
+
         editType: 'ticks',
-        
+
     },
     tickprefix: {
         valType: 'string',
         dflt: '',
-        
+
         editType: 'ticks',
-        
+
     },
     showtickprefix: {
         valType: 'enumerated',
         values: ['all', 'first', 'last', 'none'],
         dflt: 'all',
-        
+
         editType: 'ticks',
-        
+
     },
     ticksuffix: {
         valType: 'string',
         dflt: '',
-        
+
         editType: 'ticks',
-        
+
     },
     showticksuffix: {
         valType: 'enumerated',
         values: ['all', 'first', 'last', 'none'],
         dflt: 'all',
-        
+
         editType: 'ticks',
-        
+
     },
     showexponent: {
         valType: 'enumerated',
         values: ['all', 'first', 'last', 'none'],
         dflt: 'all',
-        
+
         editType: 'ticks',
-        
+
     },
     exponentformat: {
         valType: 'enumerated',
         values: ['none', 'e', 'E', 'power', 'SI', 'B'],
         dflt: 'B',
-        
+
         editType: 'ticks',
-        
+
     },
     minexponent: {
         valType: 'number',
         dflt: 3,
         min: 0,
-        
+
         editType: 'ticks',
-        
+
     },
     separatethousands: {
         valType: 'boolean',
         dflt: false,
-        
+
         editType: 'ticks',
-        
+
     },
     tickformat: {
         valType: 'string',
         dflt: '',
-        
+
         editType: 'ticks',
-        
+
     },
     tickformatstops: templatedArray('tickformatstop', {
         enabled: {
             valType: 'boolean',
-            
+
             dflt: true,
             editType: 'ticks',
-            
+
         },
         dtickrange: {
             valType: 'info_array',
-            
+
             items: [
                 {valType: 'any', editType: 'ticks'},
                 {valType: 'any', editType: 'ticks'}
             ],
             editType: 'ticks',
-            
+
         },
         value: {
             valType: 'string',
             dflt: '',
-            
+
             editType: 'ticks',
-            
+
         },
         editType: 'ticks'
     }),
     hoverformat: {
         valType: 'string',
         dflt: '',
-        
+
         editType: 'none',
-        
+
     },
     // lines and grids
     showline: {
         valType: 'boolean',
         dflt: false,
-        
+
         editType: 'ticks+layoutstyle',
-        
+
     },
     linecolor: {
         valType: 'color',
         dflt: colorAttrs.defaultLine,
-        
+
         editType: 'layoutstyle',
-        
+
     },
     linewidth: {
         valType: 'number',
         min: 0,
         dflt: 1,
-        
+
         editType: 'ticks+layoutstyle',
-        
+
     },
     showgrid: {
         valType: 'boolean',
-        
+
         editType: 'ticks',
-        
+
     },
     gridcolor: {
         valType: 'color',
         dflt: colorAttrs.lightLine,
-        
+
         editType: 'ticks',
-        
+
     },
     gridwidth: {
         valType: 'number',
         min: 0,
         dflt: 1,
-        
+
         editType: 'ticks',
-        
+
     },
     zeroline: {
         valType: 'boolean',
-        
+
         editType: 'ticks',
-        
+
     },
     zerolinecolor: {
         valType: 'color',
         dflt: colorAttrs.defaultLine,
-        
+
         editType: 'ticks',
-        
+
     },
     zerolinewidth: {
         valType: 'number',
         dflt: 1,
-        
+
         editType: 'ticks',
-        
+
     },
 
     showdividers: {
         valType: 'boolean',
         dflt: true,
-        
+
         editType: 'ticks',
-        
+
     },
     dividercolor: {
         valType: 'color',
         dflt: colorAttrs.defaultLine,
-        
+
         editType: 'ticks',
-        
+
     },
     dividerwidth: {
         valType: 'number',
         dflt: 1,
-        
+
         editType: 'ticks',
-        
+
     },
     // TODO dividerlen: that would override "to label base" length?
 
@@ -63532,18 +63532,18 @@ module.exports = {
             constants.idRegex.x.toString(),
             constants.idRegex.y.toString()
         ],
-        
+
         editType: 'plot',
-        
+
     },
     // side: not used directly, as values depend on direction
     // values are top, bottom for x axes, and left, right for y
     side: {
         valType: 'enumerated',
         values: ['top', 'bottom', 'left', 'right'],
-        
+
         editType: 'plot',
-        
+
     },
     // overlaying: not used directly, just put here for reference
     // values are false and any other same-letter axis id that's not
@@ -63555,37 +63555,37 @@ module.exports = {
             constants.idRegex.x.toString(),
             constants.idRegex.y.toString()
         ],
-        
+
         editType: 'plot',
-        
+
     },
     layer: {
         valType: 'enumerated',
         values: ['above traces', 'below traces'],
         dflt: 'above traces',
-        
+
         editType: 'plot',
-        
+
     },
     domain: {
         valType: 'info_array',
-        
+
         items: [
             {valType: 'number', min: 0, max: 1, editType: 'plot'},
             {valType: 'number', min: 0, max: 1, editType: 'plot'}
         ],
         dflt: [0, 1],
         editType: 'plot',
-        
+
     },
     position: {
         valType: 'number',
         min: 0,
         max: 1,
         dflt: 0,
-        
+
         editType: 'plot',
-        
+
     },
     categoryorder: {
         valType: 'enumerated',
@@ -63599,40 +63599,40 @@ module.exports = {
             'median ascending', 'median descending'
         ],
         dflt: 'trace',
-        
+
         editType: 'calc',
-        
+
     },
     categoryarray: {
         valType: 'data_array',
-        
+
         editType: 'calc',
-        
+
     },
     uirevision: {
         valType: 'any',
-        
+
         editType: 'none',
-        
+
     },
     editType: 'calc',
 
     _deprecated: {
         autotick: {
             valType: 'boolean',
-            
+
             editType: 'ticks',
-            
+
         },
         title: {
             valType: 'string',
-            
+
             editType: 'ticks',
-            
+
         },
         titlefont: fontAttrs({
             editType: 'ticks',
-            
+
         })
     }
 };
@@ -67134,7 +67134,7 @@ exports.attributes = function(opts, extra) {
 
     var base = {
         valType: 'info_array',
-        
+
         editType: opts.editType,
         items: [
             {valType: 'number', min: 0, max: 1, editType: opts.editType},
@@ -67149,10 +67149,10 @@ exports.attributes = function(opts, extra) {
 
     var out = {
         x: extendFlat({}, base, {
-            
+
         }),
         y: extendFlat({}, base, {
-            
+
         }),
         editType: opts.editType
     };
@@ -67162,17 +67162,17 @@ exports.attributes = function(opts, extra) {
             valType: 'integer',
             min: 0,
             dflt: 0,
-            
+
             editType: opts.editType,
-            
+
         };
         out.column = {
             valType: 'integer',
             min: 0,
             dflt: 0,
-            
+
             editType: opts.editType,
-            
+
         };
     }
 
@@ -67239,27 +67239,27 @@ module.exports = function(opts) {
     var attrs = {
         family: {
             valType: 'string',
-            
+
             noBlank: true,
             strict: true,
             editType: editType,
-            
+
         },
         size: {
             valType: 'number',
-            
+
             min: 1,
             editType: editType
         },
         color: {
             valType: 'color',
-            
+
             editType: colorEditType
         },
         editType: editType,
         // blank strings so compress_attributes can remove
         // TODO - that's uber hacky... better solution?
-        
+
     };
 
     if(opts.arrayOk) {
@@ -67287,33 +67287,33 @@ module.exports = {
 
     group: {
         valType: 'string',
-        
-        
+
+
     },
     name: {
         valType: 'string',
-        
-        
+
+
     },
     traces: {
         valType: 'any',
-        
-        
+
+
     },
     baseframe: {
         valType: 'string',
-        
-        
+
+
     },
     data: {
         valType: 'any',
-        
-        
+
+
     },
     layout: {
         valType: 'any',
-        
-        
+
+
     }
 };
 
@@ -67500,7 +67500,7 @@ var extendFlat = _dereq_('../lib/extend').extendFlat;
 
 var globalFont = fontAttrs({
     editType: 'calc',
-    
+
 });
 globalFont.family.dflt = '"Open Sans", verdana, arial, sans-serif';
 globalFont.size.dflt = 12;
@@ -67511,66 +67511,66 @@ module.exports = {
     title: {
         text: {
             valType: 'string',
-            
+
             editType: 'layoutstyle',
-            
+
         },
         font: fontAttrs({
             editType: 'layoutstyle',
-            
+
         }),
         xref: {
             valType: 'enumerated',
             dflt: 'container',
             values: ['container', 'paper'],
-            
+
             editType: 'layoutstyle',
-            
+
         },
         yref: {
             valType: 'enumerated',
             dflt: 'container',
             values: ['container', 'paper'],
-            
+
             editType: 'layoutstyle',
-            
+
         },
         x: {
             valType: 'number',
             min: 0,
             max: 1,
             dflt: 0.5,
-            
+
             editType: 'layoutstyle',
-            
+
         },
         y: {
             valType: 'number',
             min: 0,
             max: 1,
             dflt: 'auto',
-            
+
             editType: 'layoutstyle',
-            
+
         },
         xanchor: {
             valType: 'enumerated',
             dflt: 'auto',
             values: ['auto', 'left', 'center', 'right'],
-            
+
             editType: 'layoutstyle',
-            
+
         },
         yanchor: {
             valType: 'enumerated',
             dflt: 'auto',
             values: ['auto', 'top', 'middle', 'bottom'],
-            
+
             editType: 'layoutstyle',
-            
+
         },
         pad: extendFlat(padAttrs({editType: 'layoutstyle'}), {
-            
+
         }),
         editType: 'layoutstyle'
     },
@@ -67579,215 +67579,215 @@ module.exports = {
             valType: 'enumerated',
             values: [false, 'hide', 'show'],
             dflt: false,
-            
+
             editType: 'plot',
-            
+
         },
         minsize: {
             valType: 'number',
             min: 0,
             dflt: 0,
-            
+
             editType: 'plot',
-            
+
         },
         editType: 'plot'
     },
     autosize: {
         valType: 'boolean',
-        
+
         dflt: false,
         // autosize, width, and height get special editType treatment in _relayout
         // so we can handle noop resizes more efficiently
         editType: 'none',
-        
+
     },
     width: {
         valType: 'number',
-        
+
         min: 10,
         dflt: 700,
         editType: 'plot',
-        
+
     },
     height: {
         valType: 'number',
-        
+
         min: 10,
         dflt: 450,
         editType: 'plot',
-        
+
     },
     margin: {
         l: {
             valType: 'number',
-            
+
             min: 0,
             dflt: 80,
             editType: 'plot',
-            
+
         },
         r: {
             valType: 'number',
-            
+
             min: 0,
             dflt: 80,
             editType: 'plot',
-            
+
         },
         t: {
             valType: 'number',
-            
+
             min: 0,
             dflt: 100,
             editType: 'plot',
-            
+
         },
         b: {
             valType: 'number',
-            
+
             min: 0,
             dflt: 80,
             editType: 'plot',
-            
+
         },
         pad: {
             valType: 'number',
-            
+
             min: 0,
             dflt: 0,
             editType: 'plot',
-            
+
         },
         autoexpand: {
             valType: 'boolean',
-            
+
             dflt: true,
             editType: 'plot',
-            
+
         },
         editType: 'plot'
     },
     computed: {
         valType: 'any',
-        
+
         editType: 'none',
-        
+
     },
     paper_bgcolor: {
         valType: 'color',
-        
+
         dflt: colorAttrs.background,
         editType: 'plot',
-        
+
     },
     plot_bgcolor: {
         // defined here, but set in cartesian.supplyLayoutDefaults
         // because it needs to know if there are (2D) axes or not
         valType: 'color',
-        
+
         dflt: colorAttrs.background,
         editType: 'layoutstyle',
-        
+
     },
     autotypenumbers: {
         valType: 'enumerated',
         values: ['convert types', 'strict'],
         dflt: 'convert types',
-        
+
         editType: 'calc',
-        
+
     },
     separators: {
         valType: 'string',
-        
+
         editType: 'plot',
-        
+
     },
     hidesources: {
         valType: 'boolean',
-        
+
         dflt: false,
         editType: 'plot',
-        
+
     },
     showlegend: {
         // handled in legend.supplyLayoutDefaults
         // but included here because it's not in the legend object
         valType: 'boolean',
-        
+
         editType: 'legend',
-        
+
     },
     colorway: {
         valType: 'colorlist',
         dflt: colorAttrs.defaults,
-        
+
         editType: 'calc',
-        
+
     },
     datarevision: {
         valType: 'any',
-        
+
         editType: 'calc',
-        
+
     },
     uirevision: {
         valType: 'any',
-        
+
         editType: 'none',
-        
+
     },
     editrevision: {
         valType: 'any',
-        
+
         editType: 'none',
-        
+
     },
     selectionrevision: {
         valType: 'any',
-        
+
         editType: 'none',
-        
+
     },
     template: {
         valType: 'any',
-        
+
         editType: 'calc',
-        
+
     },
     modebar: {
         orientation: {
             valType: 'enumerated',
             values: ['v', 'h'],
             dflt: 'h',
-            
+
             editType: 'modebar',
-            
+
         },
         bgcolor: {
             valType: 'color',
-            
+
             editType: 'modebar',
-            
+
         },
         color: {
             valType: 'color',
-            
+
             editType: 'modebar',
-            
+
         },
         activecolor: {
             valType: 'color',
-            
+
             editType: 'modebar',
-            
+
         },
         uirevision: {
             valType: 'any',
-            
+
             editType: 'none',
-            
+
         },
         editType: 'modebar'
     },
@@ -67798,25 +67798,25 @@ module.exports = {
     meta: {
         valType: 'any',
         arrayOk: true,
-        
+
         editType: 'plot',
-        
+
     },
 
     transition: extendFlat({}, animationAttrs.transition, {
-        
+
         editType: 'none'
     }),
     _deprecated: {
         title: {
             valType: 'string',
-            
+
             editType: 'layoutstyle',
-            
+
         },
         titlefont: fontAttrs({
             editType: 'layoutstyle',
-            
+
         })
     }
 };
@@ -67847,30 +67847,30 @@ module.exports = function(opts) {
         t: {
             valType: 'number',
             dflt: 0,
-            
+
             editType: editType,
-            
+
         },
         r: {
             valType: 'number',
             dflt: 0,
-            
+
             editType: editType,
-            
+
         },
         b: {
             valType: 'number',
             dflt: 0,
-            
+
             editType: editType,
-            
+
         },
         l: {
             valType: 'number',
             dflt: 0,
-            
+
             editType: editType,
-            
+
         },
         editType: editType
     };
@@ -71325,23 +71325,23 @@ var deprecationWarning = [
 
 module.exports = {
     r: extendFlat({}, scatterAttrs.r, {
-        
+
     }),
     t: extendFlat({}, scatterAttrs.t, {
-        
+
     }),
     marker: {
         color: extendFlat({}, scatterMarkerAttrs.color, {
-            
+
         }),
         size: extendFlat({}, scatterMarkerAttrs.size, {
-            
+
         }),
         symbol: extendFlat({}, scatterMarkerAttrs.symbol, {
-            
+
         }),
         opacity: extendFlat({}, scatterMarkerAttrs.opacity, {
-            
+
         }),
         editType: 'calc'
     }
@@ -71369,52 +71369,52 @@ var deprecationWarning = [
 ].join(' ');
 
 var domainAttr = extendFlat({}, axesAttrs.domain, {
-    
+
 });
 
 function mergeAttrs(axisName, nonCommonAttrs) {
     var commonAttrs = {
         showline: {
             valType: 'boolean',
-            
-            
+
+
         },
         showticklabels: {
             valType: 'boolean',
-            
-            
+
+
         },
         tickorientation: {
             valType: 'enumerated',
             values: ['horizontal', 'vertical'],
-            
-            
+
+
         },
         ticklen: {
             valType: 'number',
             min: 0,
-            
-            
+
+
         },
         tickcolor: {
             valType: 'color',
-            
-            
+
+
         },
         ticksuffix: {
             valType: 'string',
-            
-            
+
+
         },
         endpadding: {
             valType: 'number',
-            
+
             description: deprecationWarning,
         },
         visible: {
             valType: 'boolean',
-            
-            
+
+
         }
     };
 
@@ -71425,30 +71425,30 @@ module.exports = overrideAll({
     radialaxis: mergeAttrs('radial', {
         range: {
             valType: 'info_array',
-            
+
             items: [
                 { valType: 'number' },
                 { valType: 'number' }
             ],
-            
+
         },
         domain: domainAttr,
         orientation: {
             valType: 'number',
-            
-            
+
+
         }
     }),
 
     angularaxis: mergeAttrs('angular', {
         range: {
             valType: 'info_array',
-            
+
             items: [
                 { valType: 'number', dflt: 0 },
                 { valType: 'number', dflt: 360 }
             ],
-            
+
         },
         domain: domainAttr
     }),
@@ -71458,13 +71458,13 @@ module.exports = overrideAll({
         direction: {
             valType: 'enumerated',
             values: ['clockwise', 'counterclockwise'],
-            
-            
+
+
         },
         orientation: {
             valType: 'angle',
-            
-            
+
+
         }
     }
 }, 'plot', 'nested');
@@ -73106,10 +73106,10 @@ exports.hovertemplateAttrs = function(opts, extra) {
 
     var hovertemplate = {
         valType: 'string',
-        
+
         dflt: '',
         editType: opts.editType || 'none',
-        
+
     };
 
     if(opts.arrayOk !== false) {
@@ -73127,10 +73127,10 @@ exports.texttemplateAttrs = function(opts, extra) {
 
     var texttemplate = {
         valType: 'string',
-        
+
         dflt: '',
         editType: opts.editType || 'calc',
-        
+
     };
 
     if(opts.arrayOk !== false) {
@@ -74489,7 +74489,7 @@ var textFontAttrs = fontAttrs({
     editType: 'calc',
     arrayOk: true,
     colorEditType: 'style',
-    
+
 });
 
 var scatterMarkerAttrs = scatterAttrs.marker;
@@ -74513,9 +74513,9 @@ var marker = extendFlat({
         dflt: 1,
         min: 0,
         max: 1,
-        
+
         editType: 'style',
-        
+
     }
 });
 
@@ -74545,80 +74545,80 @@ module.exports = {
 
     textposition: {
         valType: 'enumerated',
-        
+
         values: ['inside', 'outside', 'auto', 'none'],
         dflt: 'none',
         arrayOk: true,
         editType: 'calc',
-        
+
     },
 
     insidetextanchor: {
         valType: 'enumerated',
         values: ['end', 'middle', 'start'],
         dflt: 'end',
-        
+
         editType: 'plot',
-        
+
     },
 
     textangle: {
         valType: 'angle',
         dflt: 'auto',
-        
+
         editType: 'plot',
-        
+
     },
 
     textfont: extendFlat({}, textFontAttrs, {
-        
+
     }),
 
     insidetextfont: extendFlat({}, textFontAttrs, {
-        
+
     }),
 
     outsidetextfont: extendFlat({}, textFontAttrs, {
-        
+
     }),
 
     constraintext: {
         valType: 'enumerated',
         values: ['inside', 'outside', 'both', 'none'],
-        
+
         dflt: 'both',
         editType: 'calc',
-        
+
     },
 
     cliponaxis: extendFlat({}, scatterAttrs.cliponaxis, {
-        
+
     }),
 
     orientation: {
         valType: 'enumerated',
-        
+
         values: ['v', 'h'],
         editType: 'calc+clearAxisTypes',
-        
+
     },
 
     base: {
         valType: 'any',
         dflt: null,
         arrayOk: true,
-        
+
         editType: 'calc',
-        
+
     },
 
     offset: {
         valType: 'number',
         dflt: null,
         arrayOk: true,
-        
+
         editType: 'calc',
-        
+
     },
 
     width: {
@@ -74626,26 +74626,26 @@ module.exports = {
         dflt: null,
         min: 0,
         arrayOk: true,
-        
+
         editType: 'calc',
-        
+
     },
 
     marker: marker,
 
     offsetgroup: {
         valType: 'string',
-        
+
         dflt: '',
         editType: 'calc',
-        
+
     },
     alignmentgroup: {
         valType: 'string',
-        
+
         dflt: '',
         editType: 'calc',
-        
+
     },
 
     selected: {
@@ -74673,10 +74673,10 @@ module.exports = {
     _deprecated: {
         bardir: {
             valType: 'enumerated',
-            
+
             editType: 'calc',
             values: ['v', 'h'],
-            
+
         }
     }
 };
@@ -76084,7 +76084,7 @@ module.exports = {
     categories: ['bar-like', 'cartesian', 'svg', 'bar', 'oriented', 'errorBarsOK', 'showLegend', 'zoomScale'],
     animatable: true,
     meta: {
-        
+
     }
 };
 
@@ -76105,34 +76105,34 @@ module.exports = {
         valType: 'enumerated',
         values: ['stack', 'group', 'overlay', 'relative'],
         dflt: 'group',
-        
+
         editType: 'calc',
-        
+
     },
     barnorm: {
         valType: 'enumerated',
         values: ['', 'fraction', 'percent'],
         dflt: '',
-        
+
         editType: 'calc',
-        
+
     },
     bargap: {
         valType: 'number',
         min: 0,
         max: 1,
-        
+
         editType: 'calc',
-        
+
     },
     bargroupgap: {
         valType: 'number',
         min: 0,
         max: 1,
         dflt: 0,
-        
+
         editType: 'calc',
-        
+
     }
 };
 
@@ -77489,37 +77489,37 @@ module.exports = {
     y: {
         valType: 'data_array',
         editType: 'calc+clearAxisTypes',
-        
+
     },
     x: {
         valType: 'data_array',
         editType: 'calc+clearAxisTypes',
-        
+
     },
     x0: {
         valType: 'any',
-        
+
         editType: 'calc+clearAxisTypes',
-        
+
     },
     y0: {
         valType: 'any',
-        
+
         editType: 'calc+clearAxisTypes',
-        
+
     },
 
     dx: {
         valType: 'number',
-        
+
         editType: 'calc',
-        
+
     },
     dy: {
         valType: 'number',
-        
+
         editType: 'calc',
-        
+
     },
 
     xperiod: scatterAttrs.xperiod,
@@ -77531,62 +77531,62 @@ module.exports = {
 
     name: {
         valType: 'string',
-        
+
         editType: 'calc+clearAxisTypes',
-        
+
     },
 
     q1: {
         valType: 'data_array',
-        
+
         editType: 'calc+clearAxisTypes',
-        
+
     },
     median: {
         valType: 'data_array',
-        
+
         editType: 'calc+clearAxisTypes',
-        
+
     },
     q3: {
         valType: 'data_array',
-        
+
         editType: 'calc+clearAxisTypes',
-        
+
     },
     lowerfence: {
         valType: 'data_array',
-        
+
         editType: 'calc',
-        
+
     },
     upperfence: {
         valType: 'data_array',
-        
+
         editType: 'calc',
-        
+
     },
 
     notched: {
         valType: 'boolean',
-        
+
         editType: 'calc',
-        
+
     },
     notchwidth: {
         valType: 'number',
         min: 0,
         max: 0.5,
         dflt: 0.25,
-        
+
         editType: 'calc',
-        
+
     },
     notchspan: {
         valType: 'data_array',
-        
+
         editType: 'calc',
-        
+
     },
 
     // TODO
@@ -77597,80 +77597,80 @@ module.exports = {
     boxpoints: {
         valType: 'enumerated',
         values: ['all', 'outliers', 'suspectedoutliers', false],
-        
+
         editType: 'calc',
-        
+
     },
     jitter: {
         valType: 'number',
         min: 0,
         max: 1,
-        
+
         editType: 'calc',
-        
+
     },
     pointpos: {
         valType: 'number',
         min: -2,
         max: 2,
-        
+
         editType: 'calc',
-        
+
     },
 
     boxmean: {
         valType: 'enumerated',
         values: [true, 'sd', false],
-        
+
         editType: 'calc',
-        
+
     },
     mean: {
         valType: 'data_array',
-        
+
         editType: 'calc',
-        
+
     },
     sd: {
         valType: 'data_array',
-        
+
         editType: 'calc',
-        
+
     },
 
     orientation: {
         valType: 'enumerated',
         values: ['v', 'h'],
-        
+
         editType: 'calc+clearAxisTypes',
-        
+
     },
 
     quartilemethod: {
         valType: 'enumerated',
         values: ['linear', 'exclusive', 'inclusive'],
         dflt: 'linear',
-        
+
         editType: 'calc',
-        
+
     },
 
     width: {
         valType: 'number',
         min: 0,
-        
+
         dflt: 0,
         editType: 'calc',
-        
+
     },
 
     marker: {
         outliercolor: {
             valType: 'color',
             dflt: 'rgba(0, 0, 0, 0)',
-            
+
             editType: 'style',
-            
+
         },
         symbol: extendFlat({}, scatterMarkerAttrs.symbol,
             {arrayOk: false, editType: 'plot'}),
@@ -77689,17 +77689,17 @@ module.exports = {
             ),
             outliercolor: {
                 valType: 'color',
-                
+
                 editType: 'style',
-                
+
             },
             outlierwidth: {
                 valType: 'number',
                 min: 0,
                 dflt: 1,
-                
+
                 editType: 'style',
-                
+
             },
             editType: 'style'
         },
@@ -77709,17 +77709,17 @@ module.exports = {
     line: {
         color: {
             valType: 'color',
-            
+
             editType: 'style',
-            
+
         },
         width: {
             valType: 'number',
-            
+
             min: 0,
             dflt: 2,
             editType: 'style',
-            
+
         },
         editType: 'plot'
     },
@@ -77731,9 +77731,9 @@ module.exports = {
         min: 0,
         max: 1,
         dflt: 0.5,
-        
+
         editType: 'calc',
-        
+
     },
 
     offsetgroup: barAttrs.offsetgroup,
@@ -77749,22 +77749,22 @@ module.exports = {
     },
 
     text: extendFlat({}, scatterAttrs.text, {
-        
+
     }),
     hovertext: extendFlat({}, scatterAttrs.hovertext, {
-        
+
     }),
     hovertemplate: hovertemplateAttrs({
-        
+
     }),
 
     hoveron: {
         valType: 'flaglist',
         flags: ['boxes', 'points'],
         dflt: 'boxes+points',
-        
+
         editType: 'style',
-        
+
     }
 };
 
@@ -78017,27 +78017,27 @@ module.exports = {
         valType: 'enumerated',
         values: ['group', 'overlay'],
         dflt: 'overlay',
-        
+
         editType: 'calc',
-        
+
     },
     boxgap: {
         valType: 'number',
         min: 0,
         max: 1,
         dflt: 0.3,
-        
+
         editType: 'calc',
-        
+
     },
     boxgroupgap: {
         valType: 'number',
         min: 0,
         max: 1,
         dflt: 0.3,
-        
+
         editType: 'calc',
-        
+
     }
 };
 
@@ -78553,7 +78553,7 @@ module.exports = {
 
     line: {
         width: extendFlat({}, boxAttrs.line.width, {
-            
+
         }),
         editType: 'style'
     },
@@ -78687,7 +78687,7 @@ module.exports = {
     basePlotModule: _dereq_('../../plots/cartesian'),
     categories: ['cartesian', 'svg', 'showLegend', 'candlestick', 'boxLayout'],
     meta: {
-        
+
     },
 
     attributes: _dereq_('./attributes'),
@@ -78784,10 +78784,10 @@ module.exports = {
         valType: 'flaglist',
         flags: ['label', 'text', 'percent initial', 'percent previous', 'percent total', 'value'],
         extras: ['none'],
-        
+
         editType: 'plot',
         arrayOk: false,
-        
+
     },
     // TODO: incorporate `label` and `value` in the eventData
     texttemplate: texttemplateAttrs({editType: 'plot'}, {
@@ -78805,7 +78805,7 @@ module.exports = {
     cliponaxis: barAttrs.cliponaxis,
 
     orientation: extendFlat({}, barAttrs.orientation, {
-        
+
     }),
 
     offset: extendFlat({}, barAttrs.offset, {arrayOk: false}),
@@ -78816,9 +78816,9 @@ module.exports = {
     connector: {
         fillcolor: {
             valType: 'color',
-            
+
             editType: 'style',
-            
+
         },
         line: {
             color: extendFlat({}, lineAttrs.color, {dflt: Color.defaultLine}),
@@ -78832,9 +78832,9 @@ module.exports = {
         visible: {
             valType: 'boolean',
             dflt: true,
-            
+
             editType: 'plot',
-            
+
         },
         editType: 'plot'
     },
@@ -79268,7 +79268,7 @@ module.exports = {
     basePlotModule: _dereq_('../../plots/cartesian'),
     categories: ['bar-like', 'cartesian', 'svg', 'oriented', 'showLegend', 'zoomScale'],
     meta: {
-        
+
     }
 };
 
@@ -79288,26 +79288,26 @@ module.exports = {
         valType: 'enumerated',
         values: ['stack', 'group', 'overlay'],
         dflt: 'stack',
-        
+
         editType: 'calc',
-        
+
     },
     funnelgap: {
         valType: 'number',
         min: 0,
         max: 1,
-        
+
         editType: 'calc',
-        
+
     },
     funnelgroupgap: {
         valType: 'number',
         min: 0,
         max: 1,
         dflt: 0,
-        
+
         editType: 'calc',
-        
+
     }
 };
 
@@ -79613,7 +79613,7 @@ module.exports = {
         line: {
             color: extendFlat({}, pieAttrs.marker.line.color, {
                 dflt: null,
-                
+
             }),
             width: extendFlat({}, pieAttrs.marker.line.width, {dflt: 1}),
             editType: 'calc'
@@ -79625,7 +79625,7 @@ module.exports = {
     hovertext: pieAttrs.hovertext,
 
     scalegroup: extendFlat({}, pieAttrs.scalegroup, {
-        
+
     }),
 
     textinfo: extendFlat({}, pieAttrs.textinfo, {
@@ -79666,21 +79666,21 @@ module.exports = {
 
     aspectratio: {
         valType: 'number',
-        
+
         min: 0,
         dflt: 1,
         editType: 'plot',
-        
+
     },
 
     baseratio: {
         valType: 'number',
-        
+
         min: 0,
         max: 1,
         dflt: 0.333,
         editType: 'plot',
-        
+
     }
 };
 
@@ -79845,7 +79845,7 @@ module.exports = {
     styleOne: _dereq_('../pie/style_one'),
 
     meta: {
-        
+
     }
 };
 
@@ -79867,16 +79867,16 @@ module.exports = {
 
     funnelareacolorway: {
         valType: 'colorlist',
-        
+
         editType: 'calc',
-        
+
     },
     extendfunnelareacolors: {
         valType: 'boolean',
         dflt: true,
-        
+
         editType: 'calc',
-        
+
     }
 };
 
@@ -80257,64 +80257,64 @@ module.exports = {
     x: {
         valType: 'data_array',
         editType: 'calc+clearAxisTypes',
-        
+
     },
     y: {
         valType: 'data_array',
         editType: 'calc+clearAxisTypes',
-        
+
     },
 
     text: extendFlat({}, barAttrs.text, {
-        
+
     }),
     hovertext: extendFlat({}, barAttrs.hovertext, {
-        
+
     }),
     orientation: barAttrs.orientation,
 
     histfunc: {
         valType: 'enumerated',
         values: ['count', 'sum', 'avg', 'min', 'max'],
-        
+
         dflt: 'count',
         editType: 'calc',
-        
+
     },
     histnorm: {
         valType: 'enumerated',
         values: ['', 'percent', 'probability', 'density', 'probability density'],
         dflt: '',
-        
+
         editType: 'calc',
-        
+
     },
 
     cumulative: {
         enabled: {
             valType: 'boolean',
             dflt: false,
-            
+
             editType: 'calc',
-            
+
         },
 
         direction: {
             valType: 'enumerated',
             values: ['increasing', 'decreasing'],
             dflt: 'increasing',
-            
+
             editType: 'calc',
-            
+
         },
 
         currentbin: {
             valType: 'enumerated',
             values: ['include', 'exclude', 'half'],
             dflt: 'include',
-            
+
             editType: 'calc',
-            
+
         },
         editType: 'calc'
     },
@@ -80322,9 +80322,9 @@ module.exports = {
         valType: 'integer',
         min: 0,
         dflt: 0,
-        
+
         editType: 'calc',
-        
+
     },
     xbins: makeBinAttrs('x', true),
 
@@ -80332,32 +80332,32 @@ module.exports = {
         valType: 'integer',
         min: 0,
         dflt: 0,
-        
+
         editType: 'calc',
-        
+
     },
     ybins: makeBinAttrs('y', true),
     autobinx: {
         valType: 'boolean',
         dflt: null,
-        
+
         editType: 'calc',
-        
+
     },
     autobiny: {
         valType: 'boolean',
         dflt: null,
-        
+
         editType: 'calc',
-        
+
     },
 
     bingroup: {
         valType: 'string',
-        
+
         dflt: '',
         editType: 'calc',
-        
+
     },
 
     hovertemplate: hovertemplateAttrs({}, {
@@ -80417,21 +80417,21 @@ module.exports = function makeBinAttrs(axLetter, match) {
     return {
         start: {
             valType: 'any', // for date axes
-            
+
             editType: 'calc',
-            
+
         },
         end: {
             valType: 'any', // for date axes
-            
+
             editType: 'calc',
-            
+
         },
         size: {
             valType: 'any', // for date axes
-            
+
             editType: 'calc',
-            
+
         },
         editType: 'calc'
     };
@@ -81761,7 +81761,7 @@ module.exports = {
     basePlotModule: _dereq_('../../plots/cartesian'),
     categories: ['bar-like', 'cartesian', 'svg', 'bar', 'histogram', 'oriented', 'errorBarsOK', 'showLegend'],
     meta: {
-        
+
     }
 };
 
@@ -81831,48 +81831,48 @@ var gaugeBarAttrs = {
     color: {
         valType: 'color',
         editType: 'plot',
-        
-        
+
+
     },
     line: {
         color: {
             valType: 'color',
-            
+
             dflt: colorAttrs.defaultLine,
             editType: 'plot',
-            
+
         },
         width: {
             valType: 'number',
-            
+
             min: 0,
             dflt: 0,
             editType: 'plot',
-            
+
         },
         editType: 'calc'
     },
     thickness: {
         valType: 'number',
-        
+
         min: 0,
         max: 1,
         dflt: 1,
         editType: 'plot',
-        
+
     },
     editType: 'calc'
 };
 
 var rangeAttr = {
     valType: 'info_array',
-    
+
     items: [
             {valType: 'number', editType: 'plot'},
             {valType: 'number', editType: 'plot'}
     ],
     editType: 'plot',
-    
+
 };
 
 var stepsAttrs = templatedArray('step', extendDeep({}, gaugeBarAttrs, {
@@ -81883,24 +81883,24 @@ module.exports = {
     mode: {
         valType: 'flaglist',
         editType: 'calc',
-        
+
         flags: ['number', 'delta', 'gauge'],
         dflt: 'number',
-        
+
     },
     value: {
         valType: 'number',
         editType: 'calc',
-        
+
         anim: true,
-        
+
     },
     align: {
         valType: 'enumerated',
         values: ['left', 'center', 'right'],
-        
+
         editType: 'plot',
-        
+
     },
     // position
     domain: domainAttrs({name: 'indicator', trace: true, editType: 'calc'}),
@@ -81908,19 +81908,19 @@ module.exports = {
     title: {
         text: {
             valType: 'string',
-            
+
             editType: 'plot',
-            
+
         },
         align: {
             valType: 'enumerated',
             values: ['left', 'center', 'right'],
-            
+
             editType: 'plot',
-            
+
         },
         font: extendFlat({}, textFontAttrs, {
-            
+
         }),
         editType: 'plot'
     },
@@ -81928,71 +81928,71 @@ module.exports = {
         valueformat: {
             valType: 'string',
             dflt: '',
-            
+
             editType: 'plot',
-            
+
         },
         font: extendFlat({}, textFontAttrs, {
-            
+
         }),
         prefix: {
             valType: 'string',
             dflt: '',
-            
+
             editType: 'plot',
-            
+
         },
         suffix: {
             valType: 'string',
             dflt: '',
-            
+
             editType: 'plot',
-            
+
         },
         editType: 'plot'
     },
     delta: {
         reference: {
             valType: 'number',
-            
+
             editType: 'calc',
-            
+
         },
         position: {
             valType: 'enumerated',
             values: ['top', 'bottom', 'left', 'right'],
-            
+
             dflt: 'bottom',
             editType: 'plot',
-            
+
         },
         relative: {
             valType: 'boolean',
             editType: 'plot',
-            
+
             dflt: false,
-            
+
         },
         valueformat: {
             valType: 'string',
-            
+
             editType: 'plot',
-            
+
         },
         increasing: {
             symbol: {
                 valType: 'string',
-                
+
                 dflt: delta.INCREASING.SYMBOL,
                 editType: 'plot',
-                
+
             },
             color: {
                 valType: 'color',
-                
+
                 dflt: delta.INCREASING.COLOR,
                 editType: 'plot',
-                
+
             },
             // TODO: add attribute to show sign
             editType: 'plot'
@@ -82000,23 +82000,23 @@ module.exports = {
         decreasing: {
             symbol: {
                 valType: 'string',
-                
+
                 dflt: delta.DECREASING.SYMBOL,
                 editType: 'plot',
-                
+
             },
             color: {
                 valType: 'color',
-                
+
                 dflt: delta.DECREASING.COLOR,
                 editType: 'plot',
-                
+
             },
             // TODO: add attribute to hide sign
             editType: 'plot'
         },
         font: extendFlat({}, textFontAttrs, {
-            
+
         }),
         editType: 'calc'
     },
@@ -82024,36 +82024,36 @@ module.exports = {
         shape: {
             valType: 'enumerated',
             editType: 'plot',
-            
+
             dflt: 'angular',
             values: ['angular', 'bullet'],
-            
+
         },
         bar: extendDeep({}, gaugeBarAttrs, {
             color: {dflt: 'green'},
-            
+
         }),
         // Background of the gauge
         bgcolor: {
             valType: 'color',
-            
+
             editType: 'plot',
-            
+
         },
         bordercolor: {
             valType: 'color',
             dflt: colorAttrs.defaultLine,
-            
+
             editType: 'plot',
-            
+
         },
         borderwidth: {
             valType: 'number',
             min: 0,
             dflt: 1,
-            
+
             editType: 'plot',
-            
+
         },
         axis: overrideAll({
             range: rangeAttr,
@@ -82073,7 +82073,7 @@ module.exports = {
             tickcolor: axesAttrs.tickcolor,
             showticklabels: axesAttrs.showticklabels,
             tickfont: fontAttrs({
-                
+
             }),
             tickangle: axesAttrs.tickangle,
             tickformat: axesAttrs.tickformat,
@@ -82093,28 +82093,28 @@ module.exports = {
         threshold: {
             line: {
                 color: extendFlat({}, gaugeBarAttrs.line.color, {
-                    
+
                 }),
                 width: extendFlat({}, gaugeBarAttrs.line.width, {
                     dflt: 1,
-                    
+
                 }),
                 editType: 'plot'
             },
             thickness: extendFlat({}, gaugeBarAttrs.thickness, {
                 dflt: 0.85,
-                
+
             }),
             value: {
                 valType: 'number',
                 editType: 'calc',
                 dflt: false,
-                
-                
+
+
             },
             editType: 'plot'
         },
-        
+
         editType: 'plot'
         // TODO: in future version, add marker: (bar|needle)
     }
@@ -82395,7 +82395,7 @@ module.exports = {
     plot: _dereq_('./plot'),
 
     meta: {
-        
+
     }
 };
 
@@ -83322,39 +83322,39 @@ module.exports = {
     x: {
         valType: 'data_array',
         editType: 'calc+clearAxisTypes',
-        
+
     },
 
     open: {
         valType: 'data_array',
         editType: 'calc',
-        
+
     },
 
     high: {
         valType: 'data_array',
         editType: 'calc',
-        
+
     },
 
     low: {
         valType: 'data_array',
         editType: 'calc',
-        
+
     },
 
     close: {
         valType: 'data_array',
         editType: 'calc',
-        
+
     },
 
     line: {
         width: extendFlat({}, lineAttrs.width, {
-            
+
         }),
         dash: extendFlat({}, dash, {
-            
+
         }),
         editType: 'style'
     },
@@ -83365,19 +83365,19 @@ module.exports = {
 
     text: {
         valType: 'string',
-        
+
         dflt: '',
         arrayOk: true,
         editType: 'calc',
-        
+
     },
     hovertext: {
         valType: 'string',
-        
+
         dflt: '',
         arrayOk: true,
         editType: 'calc',
-        
+
     },
 
     tickwidth: {
@@ -83385,18 +83385,18 @@ module.exports = {
         min: 0,
         max: 0.5,
         dflt: 0.3,
-        
+
         editType: 'calc',
-        
+
     },
 
     hoverlabel: extendFlat({}, fxAttrs.hoverlabel, {
         split: {
             valType: 'boolean',
-            
+
             dflt: false,
             editType: 'style',
-            
+
         }
     }),
 };
@@ -83855,7 +83855,7 @@ module.exports = {
     basePlotModule: _dereq_('../../plots/cartesian'),
     categories: ['cartesian', 'svg', 'showLegend'],
     meta: {
-        
+
     },
 
     attributes: _dereq_('./attributes'),
@@ -84068,61 +84068,61 @@ var textFontAttrs = fontAttrs({
     editType: 'plot',
     arrayOk: true,
     colorEditType: 'plot',
-    
+
 });
 
 module.exports = {
     labels: {
         valType: 'data_array',
         editType: 'calc',
-        
+
     },
     // equivalent of x0 and dx, if label is missing
     label0: {
         valType: 'number',
-        
+
         dflt: 0,
         editType: 'calc',
-        
+
     },
     dlabel: {
         valType: 'number',
-        
+
         dflt: 1,
         editType: 'calc',
-        
+
     },
 
     values: {
         valType: 'data_array',
         editType: 'calc',
-        
+
     },
 
     marker: {
         colors: {
             valType: 'data_array',  // TODO 'color_array' ?
             editType: 'calc',
-            
+
         },
 
         line: {
             color: {
                 valType: 'color',
-                
+
                 dflt: colorAttrs.defaultLine,
                 arrayOk: true,
                 editType: 'style',
-                
+
             },
             width: {
                 valType: 'number',
-                
+
                 min: 0,
                 dflt: 0,
                 arrayOk: true,
                 editType: 'style',
-                
+
             },
             editType: 'calc'
         },
@@ -84132,15 +84132,15 @@ module.exports = {
     text: {
         valType: 'data_array',
         editType: 'plot',
-        
+
     },
     hovertext: {
         valType: 'string',
-        
+
         dflt: '',
         arrayOk: true,
         editType: 'style',
-        
+
     },
 
 // 'see eg:'
@@ -84149,20 +84149,20 @@ module.exports = {
 // 'of its own. but the point is the size of the whole pie is important.)'
     scalegroup: {
         valType: 'string',
-        
+
         dflt: '',
         editType: 'calc',
-        
+
     },
 
     // labels (legend is handled by plots.attributes.showlegend and layout.hiddenlabels)
     textinfo: {
         valType: 'flaglist',
-        
+
         flags: ['label', 'text', 'value', 'percent'],
         extras: ['none'],
         editType: 'calc',
-        
+
     },
     hoverinfo: extendFlat({}, baseAttrs.hoverinfo, {
         flags: ['label', 'text', 'value', 'percent', 'name']
@@ -84175,48 +84175,48 @@ module.exports = {
     }),
     textposition: {
         valType: 'enumerated',
-        
+
         values: ['inside', 'outside', 'auto', 'none'],
         dflt: 'auto',
         arrayOk: true,
         editType: 'plot',
-        
+
     },
     textfont: extendFlat({}, textFontAttrs, {
-        
+
     }),
     insidetextorientation: {
         valType: 'enumerated',
-        
+
         values: ['horizontal', 'radial', 'tangential', 'auto'],
         dflt: 'auto',
         editType: 'plot',
-        
+
     },
     insidetextfont: extendFlat({}, textFontAttrs, {
-        
+
     }),
     outsidetextfont: extendFlat({}, textFontAttrs, {
-        
+
     }),
     automargin: {
         valType: 'boolean',
         dflt: false,
-        
+
         editType: 'plot',
-        
+
     },
 
     title: {
         text: {
             valType: 'string',
             dflt: '',
-            
+
             editType: 'plot',
-            
+
         },
         font: extendFlat({}, textFontAttrs, {
-            
+
         }),
         position: {
             valType: 'enumerated',
@@ -84225,9 +84225,9 @@ module.exports = {
                 'middle center',
                 'bottom left', 'bottom center', 'bottom right'
             ],
-            
+
             editType: 'plot',
-            
+
         },
 
         editType: 'plot'
@@ -84238,21 +84238,21 @@ module.exports = {
 
     hole: {
         valType: 'number',
-        
+
         min: 0,
         max: 1,
         dflt: 0,
         editType: 'calc',
-        
+
     },
 
     // ordering and direction
     sort: {
         valType: 'boolean',
-        
+
         dflt: true,
         editType: 'calc',
-        
+
     },
     direction: {
         /**
@@ -84264,42 +84264,42 @@ module.exports = {
          */
         valType: 'enumerated',
         values: ['clockwise', 'counterclockwise'],
-        
+
         dflt: 'counterclockwise',
         editType: 'calc',
-        
+
     },
     rotation: {
         valType: 'number',
-        
+
         min: -360,
         max: 360,
         dflt: 0,
         editType: 'calc',
-        
+
     },
 
     pull: {
         valType: 'number',
-        
+
         min: 0,
         max: 1,
         dflt: 0,
         arrayOk: true,
         editType: 'calc',
-        
+
     },
 
     _deprecated: {
         title: {
             valType: 'string',
             dflt: '',
-            
+
             editType: 'calc',
-            
+
         },
         titlefont: extendFlat({}, textFontAttrs, {
-            
+
         }),
         titleposition: {
             valType: 'enumerated',
@@ -84308,9 +84308,9 @@ module.exports = {
                 'middle center',
                 'bottom left', 'bottom center', 'bottom right'
             ],
-            
+
             editType: 'calc',
-            
+
         }
     }
 };
@@ -84778,7 +84778,7 @@ module.exports = {
     basePlotModule: _dereq_('./base_plot'),
     categories: ['pie-like', 'pie', 'showLegend'],
     meta: {
-        
+
     }
 };
 
@@ -84796,22 +84796,22 @@ module.exports = {
 module.exports = {
     hiddenlabels: {
         valType: 'data_array',
-        
+
         editType: 'calc',
-        
+
     },
     piecolorway: {
         valType: 'colorlist',
-        
+
         editType: 'calc',
-        
+
     },
     extendpiecolors: {
         valType: 'boolean',
         dflt: true,
-        
+
         editType: 'calc',
-        
+
     }
 };
 
@@ -86155,18 +86155,18 @@ function axisPeriod(axis) {
     return {
         valType: 'any',
         dflt: 0,
-        
+
         editType: 'calc',
-        
+
     };
 }
 
 function axisPeriod0(axis) {
     return {
         valType: 'any',
-        
+
         editType: 'calc',
-        
+
     };
 }
 
@@ -86177,9 +86177,9 @@ function axisPeriodAlignment(axis) {
             'start', 'middle', 'end'
         ],
         dflt: 'middle',
-        
+
         editType: 'calc',
-        
+
     };
 }
 
@@ -86188,45 +86188,45 @@ module.exports = {
         valType: 'data_array',
         editType: 'calc+clearAxisTypes',
         anim: true,
-        
+
     },
     x0: {
         valType: 'any',
         dflt: 0,
-        
+
         editType: 'calc+clearAxisTypes',
         anim: true,
-        
+
     },
     dx: {
         valType: 'number',
         dflt: 1,
-        
+
         editType: 'calc',
         anim: true,
-        
+
     },
     y: {
         valType: 'data_array',
         editType: 'calc+clearAxisTypes',
         anim: true,
-        
+
     },
     y0: {
         valType: 'any',
         dflt: 0,
-        
+
         editType: 'calc+clearAxisTypes',
         anim: true,
-        
+
     },
     dy: {
         valType: 'number',
         dflt: 1,
-        
+
         editType: 'calc',
         anim: true,
-        
+
     },
 
     xperiod: axisPeriod('x'),
@@ -86238,42 +86238,42 @@ module.exports = {
 
     stackgroup: {
         valType: 'string',
-        
+
         dflt: '',
         editType: 'calc',
-        
+
     },
     orientation: {
         valType: 'enumerated',
-        
+
         values: ['v', 'h'],
         editType: 'calc',
-        
+
     },
     groupnorm: {
         valType: 'enumerated',
         values: ['', 'fraction', 'percent'],
         dflt: '',
-        
+
         editType: 'calc',
-        
+
     },
     stackgaps: {
         valType: 'enumerated',
         values: ['infer zero', 'interpolate'],
         dflt: 'infer zero',
-        
+
         editType: 'calc',
-        
+
     },
 
     text: {
         valType: 'string',
-        
+
         dflt: '',
         arrayOk: true,
         editType: 'calc',
-        
+
     },
 
     texttemplate: texttemplateAttrs({}, {
@@ -86281,26 +86281,26 @@ module.exports = {
     }),
     hovertext: {
         valType: 'string',
-        
+
         dflt: '',
         arrayOk: true,
         editType: 'style',
-        
+
     },
     mode: {
         valType: 'flaglist',
         flags: ['lines', 'markers', 'text'],
         extras: ['none'],
-        
+
         editType: 'calc',
-        
+
     },
     hoveron: {
         valType: 'flaglist',
         flags: ['points', 'fills'],
-        
+
         editType: 'style',
-        
+
     },
     hovertemplate: hovertemplateAttrs({}, {
         keys: constants.eventDataKeys
@@ -86308,44 +86308,44 @@ module.exports = {
     line: {
         color: {
             valType: 'color',
-            
+
             editType: 'style',
             anim: true,
-            
+
         },
         width: {
             valType: 'number',
             min: 0,
             dflt: 2,
-            
+
             editType: 'style',
             anim: true,
-            
+
         },
         shape: {
             valType: 'enumerated',
             values: ['linear', 'spline', 'hv', 'vh', 'hvh', 'vhv'],
             dflt: 'linear',
-            
+
             editType: 'plot',
-            
+
         },
         smoothing: {
             valType: 'number',
             min: 0,
             max: 1.3,
             dflt: 1,
-            
+
             editType: 'plot',
-            
+
         },
         dash: extendFlat({}, dash, {editType: 'style'}),
         simplify: {
             valType: 'boolean',
             dflt: true,
-            
+
             editType: 'plot',
-            
+
         },
         editType: 'plot'
     },
@@ -86353,31 +86353,31 @@ module.exports = {
     connectgaps: {
         valType: 'boolean',
         dflt: false,
-        
+
         editType: 'calc',
-        
+
     },
     cliponaxis: {
         valType: 'boolean',
         dflt: true,
-        
+
         editType: 'plot',
-        
+
     },
 
     fill: {
         valType: 'enumerated',
         values: ['none', 'tozeroy', 'tozerox', 'tonexty', 'tonextx', 'toself', 'tonext'],
-        
+
         editType: 'calc',
-        
+
     },
     fillcolor: {
         valType: 'color',
-        
+
         editType: 'style',
         anim: true,
-        
+
     },
     marker: extendFlat({
         symbol: {
@@ -86385,60 +86385,60 @@ module.exports = {
             values: Drawing.symbolList,
             dflt: 'circle',
             arrayOk: true,
-            
+
             editType: 'style',
-            
+
         },
         opacity: {
             valType: 'number',
             min: 0,
             max: 1,
             arrayOk: true,
-            
+
             editType: 'style',
             anim: true,
-            
+
         },
         size: {
             valType: 'number',
             min: 0,
             dflt: 6,
             arrayOk: true,
-            
+
             editType: 'calc',
             anim: true,
-            
+
         },
         maxdisplayed: {
             valType: 'number',
             min: 0,
             dflt: 0,
-            
+
             editType: 'plot',
-            
+
         },
         sizeref: {
             valType: 'number',
             dflt: 1,
-            
+
             editType: 'calc',
-            
+
         },
         sizemin: {
             valType: 'number',
             min: 0,
             dflt: 0,
-            
+
             editType: 'calc',
-            
+
         },
         sizemode: {
             valType: 'enumerated',
             values: ['diameter', 'area'],
             dflt: 'diameter',
-            
+
             editType: 'calc',
-            
+
         },
 
         line: extendFlat({
@@ -86446,10 +86446,10 @@ module.exports = {
                 valType: 'number',
                 min: 0,
                 arrayOk: true,
-                
+
                 editType: 'style',
                 anim: true,
-                
+
             },
             editType: 'calc'
         },
@@ -86461,16 +86461,16 @@ module.exports = {
                 values: ['radial', 'horizontal', 'vertical', 'none'],
                 arrayOk: true,
                 dflt: 'none',
-                
+
                 editType: 'calc',
-                
+
             },
             color: {
                 valType: 'color',
                 arrayOk: true,
-                
+
                 editType: 'calc',
-                
+
             },
             editType: 'calc'
         },
@@ -86484,31 +86484,31 @@ module.exports = {
                 valType: 'number',
                 min: 0,
                 max: 1,
-                
+
                 editType: 'style',
-                
+
             },
             color: {
                 valType: 'color',
-                
+
                 editType: 'style',
-                
+
             },
             size: {
                 valType: 'number',
                 min: 0,
-                
+
                 editType: 'style',
-                
+
             },
             editType: 'style'
         },
         textfont: {
             color: {
                 valType: 'color',
-                
+
                 editType: 'style',
-                
+
             },
             editType: 'style'
         },
@@ -86520,31 +86520,31 @@ module.exports = {
                 valType: 'number',
                 min: 0,
                 max: 1,
-                
+
                 editType: 'style',
-                
+
             },
             color: {
                 valType: 'color',
-                
+
                 editType: 'style',
-                
+
             },
             size: {
                 valType: 'number',
                 min: 0,
-                
+
                 editType: 'style',
-                
+
             },
             editType: 'style'
         },
         textfont: {
             color: {
                 valType: 'color',
-                
+
                 editType: 'style',
-                
+
             },
             editType: 'style'
         },
@@ -86560,26 +86560,26 @@ module.exports = {
         ],
         dflt: 'middle center',
         arrayOk: true,
-        
+
         editType: 'calc',
-        
+
     },
     textfont: fontAttrs({
         editType: 'calc',
         colorEditType: 'style',
         arrayOk: true,
-        
+
     }),
 
     r: {
         valType: 'data_array',
         editType: 'calc',
-        
+
     },
     t: {
         valType: 'data_array',
         editType: 'calc',
-        
+
     }
 };
 
@@ -87635,7 +87635,7 @@ module.exports = {
         'zoomScale'
     ],
     meta: {
-        
+
     }
 };
 
@@ -89358,18 +89358,18 @@ function directionAttrs(dirTxt) {
             color: extendFlat({}, barAttrs.marker.color, {
                 arrayOk: false,
                 editType: 'style',
-                
+
             }),
             line: {
                 color: extendFlat({}, barAttrs.marker.line.color, {
                     arrayOk: false,
                     editType: 'style',
-                    
+
                 }),
                 width: extendFlat({}, barAttrs.marker.line.width, {
                     arrayOk: false,
                     editType: 'style',
-                    
+
                 }),
                 editType: 'style',
             },
@@ -89383,18 +89383,18 @@ module.exports = {
     measure: {
         valType: 'data_array',
         dflt: [],
-        
+
         editType: 'calc',
-        
+
     },
 
     base: {
         valType: 'number',
         dflt: null,
         arrayOk: false,
-        
+
         editType: 'calc',
-        
+
     },
 
     x: barAttrs.x,
@@ -89424,10 +89424,10 @@ module.exports = {
         valType: 'flaglist',
         flags: ['label', 'text', 'initial', 'delta', 'final'],
         extras: ['none'],
-        
+
         editType: 'plot',
         arrayOk: false,
-        
+
     },
     // TODO: incorporate `label` and `value` in the eventData
     texttemplate: texttemplateAttrs({editType: 'plot'}, {
@@ -89465,16 +89465,16 @@ module.exports = {
             valType: 'enumerated',
             values: ['spanning', 'between'],
             dflt: 'between',
-            
+
             editType: 'plot',
-            
+
         },
         visible: {
             valType: 'boolean',
             dflt: true,
-            
+
             editType: 'plot',
-            
+
         },
         editType: 'plot'
     },
@@ -89951,7 +89951,7 @@ module.exports = {
     basePlotModule: _dereq_('../../plots/cartesian'),
     categories: ['bar-like', 'cartesian', 'svg', 'oriented', 'showLegend', 'zoomScale'],
     meta: {
-        
+
     }
 };
 
@@ -89971,26 +89971,26 @@ module.exports = {
         valType: 'enumerated',
         values: ['group', 'overlay'],
         dflt: 'group',
-        
+
         editType: 'calc',
-        
+
     },
     waterfallgap: {
         valType: 'number',
         min: 0,
         max: 1,
-        
+
         editType: 'calc',
-        
+
     },
     waterfallgroupgap: {
         valType: 'number',
         min: 0,
         max: 1,
         dflt: 0,
-        
+
         editType: 'calc',
-        
+
     }
 };
 
