@@ -52,8 +52,7 @@
   },
   "browserify": {
     "transform": [
-      "glslify",
-      "./tasks/compress_attributes.js"
+      "glslify"
     ]
   },
   "dependencies": {
