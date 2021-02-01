@@ -12,11 +12,11 @@ where X.Y.Z is the semver of most recent plotly.js release.
 ## [2.0.0] -- UNRELEASED
 
 ### Added
- - Removed usage of function constructors from `basic`, `strict` ... COMPLETE LIST ...
+ - Removed usage of function constructors from `basic`, `finance`, `geo`, and `mapbox`
    partial bundles and added tests to ensure that they will not again do so in the
    future, with thanks to [Equinor](https://www.equinor.com) for sponsoring the related development!
  - Add `strict` partial bundle [#5359, #5383, #5387, #5413, #5444], which includes
-   the subset of the library which does not rely on function constructors
+   the maximal subset of the library which does not rely on function constructors
  - Implement "fast" `zsmooth` option for `image` trace [#5354, #5386],
    with thanks to @almarklein for the contribution!
 
@@ -40,9 +40,9 @@ where X.Y.Z is the semver of most recent plotly.js release.
 ### Changed
  - Switch to `native-promise-only` module to handle es6 promises [#5358]
  - Switch to `probe-image-size` module to get width and height of images [#5388]
- - Relax condition for plain-objects to enable validation using node.js [#5411]
+ - Relax test for plain objects to enable validation in node.js and multiple window contexts [#5411]
  - Fire `plotly_unhover` event when dragging [#5407],
-   with thanks to @rreusser for a new contribution!
+   with thanks to @rreusser for the contribution!
  - Include transforms and calendars in partial bundles [#5379, #5422]
  - Require unminified `mapbox-gl` dependency for unminified bundles and
    revisit compression options for minified bundles [#5449]
@@ -52,7 +52,7 @@ where X.Y.Z is the semver of most recent plotly.js release.
  - More maintenance work listed under the [the 60th milestone](https://github.com/plotly/plotly.js/milestone/60)!
 
 ### Fixed
- - Fix "toself" `fill` to handle multiple polygons for `scattergl` traces [#5355],
+ - Fix "toself" `fill` for `scattergl` traces to handle multiple polygons [#5355],
    with thanks to @ruijin for the contribution!
  - Fix element targeting on hover in shadow DOM [#5256],
    with thanks to @dbluhm for the contribution!
