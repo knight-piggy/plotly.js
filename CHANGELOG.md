@@ -12,24 +12,32 @@ where X.Y.Z is the semver of most recent plotly.js release.
 ## [2.0.0] -- UNRELEASED
 
 ### Added
- - Add `strict` partial bundles [#5359, #5383, #5387, #5413, #5444],
-   thanks to [the equinor](https://www.equinor.com) for sponsoring the related development!
+ - Removed usage of function constructors from `basic`, `strict` ... COMPLETE LIST ...
+   partial bundles and added tests to ensure that they will not again do so in the
+   future, with thanks to [Equinor](https://www.equinor.com) for sponsoring the related development!
+ - Add `strict` partial bundle [#5359, #5383, #5387, #5413, #5444], which includes
+   the subset of the library which does not rely on function constructors
  - Implement "fast" `zsmooth` option for `image` trace [#5354, #5386],
    with thanks to @almarklein for the contribution!
 
-### Changed
- - Stop exporting d3-v3 to the API [#5400, #5406]
+### Removed
+ - Drop support for old browsers IE9 and IE10 [#5376, #5380]
+ - Stop exporting v3 of d3 under `Plotly.d3` [#5400, #5406]
  - Stop attaching `_has*` plot types to `fullLayout` [#5409]
  - Reduce the number of exported methods from `Plotly.Fx` and `Plotly.Plots` in the API [#5420]
  - Drop `Plotly.plot` from the API [#5412, #5370, #5393]
  - Drop `Plotly.Queue` from the API [#5423]
  - Drop non-object `role` keys from attribute definition [#5425, #5432]
- - Drop `contourgl` trace and deprecate `gl2d` traces namely `heatmapgl` and `pointcloud`
-   in [#5398, #5438, #5447]
- - Drop legacy `polar` and `area` trace as well as `bar.t`, `bar.r`,
+ - Drop deprecated `contourgl` and `area` traces as well as deprecated legacy
+   pre-`scatterpolar` polar-related attributes `bar.t`, `bar.r`,
    `scatter.t`, `scatter.r`, `layout.radialaxis`, `layout.angularaxis` and
-   `gd.framework` [#5399, #5408, #5409]
- - Drop support for old browsers IE9 and IE10 [#5376, #5380]
+   `gd.framework` [#5399, #5408, #5409, #5398, #5438]
+
+### Deprecated
+ - Deprecate `heatmapgl` and `pointcloud` trace types for later removal [#5447]
+
+
+### Changed
  - Switch to `native-promise-only` module to handle es6 promises [#5358]
  - Switch to `probe-image-size` module to get width and height of images [#5388]
  - Relax condition for plain-objects to enable validation using node.js [#5411]
