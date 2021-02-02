@@ -12,7 +12,7 @@ where X.Y.Z is the semver of most recent plotly.js release.
 ## [2.0.0] -- UNRELEASED
 
 ### Added
- - Removed usage of function constructors from `basic`, `finance`, `geo`, and `mapbox`
+ - Removed usage of function constructors from `basic`, `cartesian`, `finance`, `geo`, and `mapbox`
    partial bundles and added tests to ensure that they will not again do so in the
    future, with thanks to [Equinor](https://www.equinor.com) for sponsoring the related development!
  - Add `strict` partial bundle [#5359, #5383, #5387, #5413, #5444], which includes
